@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mangos Premium</title>
+    <meta name="description" content="Estamos aquí para responder a tus preguntas y ayudarte con cualquier información que necesites sobre nuestros productos y servicios.">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/cultivares.jpg">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span>Cultivares</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="vacantes.html">Vacantes</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="vacantes.html">Vacantes</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Contacto</h1>
+                <p>Estamos aquí para responder a tus preguntas y ayudarte con cualquier información que necesites sobre nuestros productos y servicios.</p>
+            </div>
+        </section>
+
+        <!-- Contact Info and Form -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Información de Contacto</h2>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Dirección</h3>
+                                    <p>
+                                        Carretera Internacional km 123<br>
+                                        Col. Industrial, CP 12345<br>
+                                        Ciudad Mango, México
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Teléfono</h3>
+                                    <p>
+                                        +52 123 456 7890<br>
+                                        +52 123 456 7891
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>
+                                        info@mangospremium.com<br>
+                                        ventas@mangospremium.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Horario de Atención</h3>
+                                    <p>
+                                        Lunes a Viernes: 8:00 AM - 6:00 PM<br>
+                                        Sábado: 9:00 AM - 2:00 PM<br>
+                                        Domingo: Cerrado
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-map">
+                            <h2>Ubicación</h2>
+                            <div class="map-container">
+                                <!-- Aquí iría un mapa, por ahora usamos un placeholder -->
+                                <div class="map-placeholder">
+                                    <p>Mapa de ubicación</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Envíanos un Mensaje</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
+                                </div>
+                                <div class="form-group">
+                                    <label for="empresa">Empresa</label>
+                                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto <span class="required">*</span></label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="" disabled selected>Selecciona un asunto</option>
+                                    <option value="informacion">Información General</option>
+                                    <option value="ventas">Ventas</option>
+                                    <option value="cotizacion">Solicitud de Cotización</option>
+                                    <option value="distribucion">Distribución</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje <span class="required">*</span></label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <button class="faq-btn">¿Cuáles son los métodos de pago aceptados?</button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Aceptamos transferencias bancarias, depósitos, cheques y pagos con tarjeta de crédito o débito. Para clientes recurrentes, ofrecemos opciones de crédito según evaluación.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <button class="faq-btn">¿Realizan envíos internacionales?</button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, exportamos nuestros productos a diversos países, cumpliendo con todas las regulaciones fitosanitarias y de comercio internacional. Contáctanos para más detalles sobre destinos específicos.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <button class="faq-btn">¿Cuál es el pedido mínimo?</button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>El pedido mínimo varía según el tipo de producto y destino. Para ventas nacionales, generalmente es de 100 kg, mientras que para exportación suele ser de 1 tonelada. Contáctanos para casos específicos.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <button class="faq-btn">¿Ofrecen muestras de sus productos?</button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, podemos enviar muestras a clientes potenciales para que evalúen la calidad de nuestros mangos. Las muestras tienen un costo que puede ser descontado del primer pedido.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <button class="faq-btn">¿Cuánto tiempo tarda en llegar un pedido?</button>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Los tiempos de entrega dependen del destino y volumen del pedido. Para entregas nacionales, generalmente entre 1-3 días hábiles. Para exportaciones, entre 7-14 días dependiendo del país de destino.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Mangos Premium</h3>
+                    <p>Empresa líder en empaque y distribución de mangos de alta calidad para el mercado nacional e internacional.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="vacantes.html">Vacantes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="contact-info">
+                        <p>Email: info@mangospremium.com</p>
+                        <p>Teléfono: +52 123 456 7890</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Mangos Premium. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/animaciones.js"></script>
+</body>
+</html>

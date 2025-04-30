@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Mangos Premium</title>
+    <meta name="description" content="Descubre nuestra amplia variedad de mangos de alta calidad, seleccionados y empacados con los más altos estándares.">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/cultivares.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span>Cultivares</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="vacantes.html">Vacantes</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="vacantes.html">Vacantes</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestros Productos</h1>
+                <p>Descubre nuestra amplia variedad de mangos de alta calidad, seleccionados y empacados con los más altos estándares.</p>
+            </div>
+        </section>
+
+        <!-- Products Categories -->
+        <section class="products-section">
+            <div class="container">
+                <div class="tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="variedades">Variedades</button>
+                        <button class="tab-btn" data-tab="empaques">Tipos de Empaque</button>
+                        <button class="tab-btn" data-tab="clasificacion">Clasificación</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="variedades">
+                        <div class="products-grid">
+                            <div class="product-detail-card">
+                                <div class="product-detail-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Mango Ataulfo">
+                                </div>
+                                <div class="product-detail-info">
+                                    <h3>Mango Ataulfo</h3>
+                                    <p>También conocido como mango Manila, es pequeño y de forma ovalada. Su pulpa es cremosa, dulce y con poca fibra, ideal para postres y ensaladas.</p>
+                                    <div class="product-tags">
+                                        <span>Dulce</span>
+                                        <span>Cremoso</span>
+                                        <span>Poca Fibra</span>
+                                    </div>
+                                    <p class="product-season"><strong>Temporada:</strong> Marzo a Julio</p>
+                                </div>
+                            </div>
+                            <div class="product-detail-card">
+                                <div class="product-detail-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Mango Tommy Atkins">
+                                </div>
+                                <div class="product-detail-info">
+                                    <h3>Mango Tommy Atkins</h3>
+                                    <p>De tamaño mediano a grande, con piel roja y amarilla. Su pulpa es firme y jugosa, con un sabor dulce y ligeramente ácido. Excelente para consumo fresco.</p>
+                                    <div class="product-tags">
+                                        <span>Jugoso</span>
+                                        <span>Firme</span>
+                                        <span>Resistente</span>
+                                    </div>
+                                    <p class="product-season"><strong>Temporada:</strong> Abril a Agosto</p>
+                                </div>
+                            </div>
+                            <div class="product-detail-card">
+                                <div class="product-detail-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Mango Kent">
+                                </div>
+                                <div class="product-detail-info">
+                                    <h3>Mango Kent</h3>
+                                    <p>De tamaño grande, con piel verde y roja. Su pulpa es jugosa y dulce, con poca fibra. Ideal para consumo fresco y preparación de jugos.</p>
+                                    <div class="product-tags">
+                                        <span>Dulce</span>
+                                        <span>Aromático</span>
+                                        <span>Poca Fibra</span>
+                                    </div>
+                                    <p class="product-season"><strong>Temporada:</strong> Mayo a Agosto</p>
+                                </div>
+                            </div>
+                            <div class="product-detail-card">
+                                <div class="product-detail-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Mango Keitt">
+                                </div>
+                                <div class="product-detail-info">
+                                    <h3>Mango Keitt</h3>
+                                    <p>De tamaño grande, con piel verde. Su pulpa es firme y dulce, con poca fibra. Excelente para consumo fresco y procesamiento.</p>
+                                    <div class="product-tags">
+                                        <span>Dulce</span>
+                                        <span>Firme</span>
+                                        <span>Tardío</span>
+                                    </div>
+                                    <p class="product-season"><strong>Temporada:</strong> Julio a Septiembre</p>
+                                </div>
+                            </div>
+                            <div class="product-detail-card">
+                                <div class="product-detail-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Mango Haden">
+                                </div>
+                                <div class="product-detail-info">
+                                    <h3>Mango Haden</h3>
+                                    <p>De tamaño mediano a grande, con piel roja y amarilla. Su pulpa es firme y aromática, con un sabor dulce y rico.</p>
+                                    <div class="product-tags">
+                                        <span>Aromático</span>
+                                        <span>Colorido</span>
+                                        <span>Sabroso</span>
+                                    </div>
+                                    <p class="product-season"><strong>Temporada:</strong> Marzo a Junio</p>
+                                </div>
+                            </div>
+                            <div class="product-detail-card">
+                                <div class="product-detail-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Mango Manila">
+                                </div>
+                                <div class="product-detail-info">
+                                    <h3>Mango Manila</h3>
+                                    <p>De tamaño pequeño a mediano, con piel amarilla. Su pulpa es muy dulce y aromática, con fibra moderada. Muy popular en México.</p>
+                                    <div class="product-tags">
+                                        <span>Muy Dulce</span>
+                                        <span>Aromático</span>
+                                        <span>Tradicional</span>
+                                    </div>
+                                    <p class="product-season"><strong>Temporada:</strong> Abril a Julio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="empaques">
+                        <div class="packaging-grid">
+                            <div class="packaging-card">
+                                <div class="packaging-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Cajas de Cartón">
+                                </div>
+                                <div class="packaging-info">
+                                    <h3>Cajas de Cartón</h3>
+                                    <p>Nuestras cajas de cartón están diseñadas específicamente para proteger los mangos durante el transporte y mantener su frescura. Disponibles en diferentes tamaños según las necesidades del cliente.</p>
+                                    <ul>
+                                        <li>Capacidad: 4kg, 6kg, 10kg</li>
+                                        <li>Material: Cartón corrugado de alta resistencia</li>
+                                        <li>Ventilación optimizada</li>
+                                        <li>Apilables para facilitar el transporte</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="packaging-card">
+                                <div class="packaging-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Bandejas Plásticas">
+                                </div>
+                                <div class="packaging-info">
+                                    <h3>Bandejas Plásticas</h3>
+                                    <p>Ideales para la presentación en supermercados, nuestras bandejas plásticas mantienen los mangos organizados y protegidos, facilitando su exhibición y venta al por menor.</p>
+                                    <ul>
+                                        <li>Capacidad: 2kg, 3kg</li>
+                                        <li>Material: Plástico reciclable</li>
+                                        <li>Diseño ergonómico</li>
+                                        <li>Opción con film protector</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="packaging-card">
+                                <div class="packaging-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Embalaje a Granel">
+                                </div>
+                                <div class="packaging-info">
+                                    <h3>Embalaje a Granel</h3>
+                                    <p>Para clientes que requieren grandes volúmenes, ofrecemos opciones de embalaje a granel que optimizan el espacio y reducen costos de transporte.</p>
+                                    <ul>
+                                        <li>Capacidad: 20kg, 25kg</li>
+                                        <li>Cajas reforzadas para mayor protección</li>
+                                        <li>Diseñadas para transporte de larga distancia</li>
+                                        <li>Opciones con control de temperatura</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="packaging-card">
+                                <div class="packaging-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="Empaque Premium">
+                                </div>
+                                <div class="packaging-info">
+                                    <h3>Empaque Premium</h3>
+                                    <p>Para regalos corporativos o tiendas gourmet, ofrecemos empaques premium que destacan la calidad de nuestros mangos y añaden un toque de elegancia.</p>
+                                    <ul>
+                                        <li>Presentaciones de 1kg a 5kg</li>
+                                        <li>Diseño elegante y personalizable</li>
+                                        <li>Opciones con mangos seleccionados</li>
+                                        <li>Ideal para regalos y ocasiones especiales</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="clasificacion">
+                        <div class="classification-section">
+                            <div class="classification-info">
+                                <h3>Nuestro Sistema de Clasificación</h3>
+                                <p>En Mangos Premium, clasificamos nuestros productos según estrictos criterios de calidad para garantizar que cada cliente reciba exactamente lo que necesita. Nuestro sistema de clasificación se basa en:</p>
+                                <div class="classification-grid">
+                                    <div class="classification-card">
+                                        <h4>Tamaño</h4>
+                                        <ul>
+                                            <li>Extra Grande (XL): 450g+</li>
+                                            <li>Grande (L): 350-450g</li>
+                                            <li>Mediano (M): 250-350g</li>
+                                            <li>Pequeño (S): 150-250g</li>
+                                        </ul>
+                                    </div>
+                                    <div class="classification-card">
+                                        <h4>Madurez</h4>
+                                        <ul>
+                                            <li>Verde: Para maduración posterior</li>
+                                            <li>Semi-maduro: Ideal para transporte</li>
+                                            <li>Maduro: Listo para consumo</li>
+                                            <li>Premium: Punto óptimo de madurez</li>
+                                        </ul>
+                                    </div>
+                                    <div class="classification-card">
+                                        <h4>Calidad</h4>
+                                        <ul>
+                                            <li>Premium: Sin defectos</li>
+                                            <li>Categoría I: Defectos mínimos</li>
+                                            <li>Categoría II: Defectos leves</li>
+                                            <li>Industrial: Para procesamiento</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="certifications">
+                                <h3>Certificaciones de Calidad</h3>
+                                <p>Todos nuestros productos cumplen con rigurosos estándares internacionales de calidad y seguridad alimentaria, respaldados por las siguientes certificaciones:</p>
+                                <div class="certifications-grid">
+                                    <div class="certification-card">
+                                        <img src="https://via.placeholder.com/100x100" alt="Global GAP">
+                                        <h4>Global GAP</h4>
+                                    </div>
+                                    <div class="certification-card">
+                                        <img src="https://via.placeholder.com/100x100" alt="HACCP">
+                                        <h4>HACCP</h4>
+                                    </div>
+                                    <div class="certification-card">
+                                        <img src="https://via.placeholder.com/100x100" alt="ISO 22000">
+                                        <h4>ISO 22000</h4>
+                                    </div>
+                                    <div class="certification-card">
+                                        <img src="https://via.placeholder.com/100x100" alt="BRC Food">
+                                        <h4>BRC Food</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>¿Interesado en nuestros productos?</h2>
+                <p>Contáctanos para obtener más información sobre disponibilidad, precios y condiciones de envío.</p>
+                <a href="contacto.html" class="btn btn-white">Solicitar Cotización</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Mangos Premium</h3>
+                    <p>Empresa líder en empaque y distribución de mangos de alta calidad para el mercado nacional e internacional.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="vacantes.html">Vacantes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="contact-info">
+                        <p>Email: info@mangospremium.com</p>
+                        <p>Teléfono: +52 123 456 7890</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Mangos Premium. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/animaciones.js"></script>
+</body>
+</html>
