@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <div class="vacancy-apply">
                             <h3>¿Interesado en aplicar?</h3>
-                            <p>Envía tu CV a <strong>reclutamiento@mangospremium.com</strong> con el asunto "${vacancy.titulo}" o completa el formulario en nuestra sección de contacto.</p>
+                            <p>Envía tu CV a <strong>reclutamiento@cultivares.com</strong> con el asunto "${vacancy.titulo}" o completa el formulario en nuestra sección de contacto.</p>
                             <a href="contacto.html" class="btn btn-primary">Ir al Formulario de Contacto</a>
                         </div>
                     `;
