@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 id: 3,
                 titulo: "Gerente de Logística",
                 departamento: "Logística y Distribución",
-                ubicacion: "Ciudad Mango, México",
+                ubicacion: "El Rosario, Sinaloa México",
                 tipo: "Tiempo Completo",
                 salario: "$25,000 - $35,000 MXN mensual",
                 descripcion: "Buscamos un Gerente de Logística con experiencia en la industria alimentaria para optimizar nuestros procesos de distribución nacional e internacional de mangos frescos.",
