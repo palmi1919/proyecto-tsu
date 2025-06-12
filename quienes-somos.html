@@ -6,12 +6,21 @@
     <title>Cultivares - ¿Quiénes Somos?</title>
     <meta name="description" content="Conoce más sobre nuestra empresa, nuestra historia y nuestro compromiso con la calidad en el empaque de mangos.">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/logos/grupo_cultivares_logo.png">
 
+    <link rel="stylesheet" href="/css/carga.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logos/grupo_cultivares_logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="loading"> <div id="loader-wrapper">
+        <div class="loader-content">
+            <img src="img/logos/logo2.png" alt="Logo Cultivares" class="loader-logo animate__animated animate__fadeInUp">
+            <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia.</p>
+        </div>
+    </div>
+
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
@@ -24,8 +33,7 @@
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
-                    <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
-                </ul>
+                    </ul>
             </nav>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,21 +46,17 @@
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
-            </ul>
+                </ul>
         </div>
     </header>
 
-    <main>
-        <!-- Header -->
-        <section class="page-header">
+    <main id="main-content"> <section class="page-header">
             <div class="container">
                 <h1>¿Quiénes Somos?</h1>
                 <p>Conoce más sobre nuestra empresa, nuestra historia y nuestro compromiso con la calidad en el empaque de mangos.</p>
             </div>
         </section>
 
-        <!-- About Us -->
         <section class="about-section">
             <div class="container">
                 <div class="about-grid">
@@ -76,7 +80,6 @@
             </div>
         </section>
 
-        <!-- Mission and Vision -->
         <section class="mission-vision">
             <div class="container">
                 <div class="mission-vision-grid">
@@ -92,7 +95,6 @@
             </div>
         </section>
 
-        <!-- Values -->
         <section class="values-section">
             <div class="container">
                 <h2 class="section-title">Nuestros Valores</h2>
@@ -129,7 +131,6 @@
             </div>
         </section>
 
-        <!-- Team -->
         <section class="team-section">
             <div class="container">
                 <h2 class="section-title">Nuestro Equipo Directivo</h2>
@@ -202,17 +203,14 @@
                         <li><a href="productos.html">Productos</a></li>
                         <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
-                        <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
-                    </ul>
+                        </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook" src=""></i></a>
-                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin" src=""></i></a>
-                        <!-- <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a> -->
-                    </div>
+                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     <div class="contact-info">
                         <p>Email: info@Cultivares.com</p>
                         <p>Teléfono: +52 123 456 7890</p>
@@ -226,5 +224,6 @@
     </footer>
 
     <script src="/js/js.js"></script>
+    <script src="/js/carga.js"></script>
 </body>
 </html>

@@ -3,56 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - cultivares  </title>
+    <title>Inicio - Cultivares</title>
     <meta name="description" content="Empresa líder en empaque y distribución de mangos de alta calidad">
+    
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/logos/grupo_cultivares_logo.png">
+    <link rel="stylesheet" href="/css/carga.css"> <link rel="icon" type="image/png" sizes="32x32" href="/img/logos/grupo_cultivares_logo.png">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="loading">
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <img src="img/logos/logo2.png" alt="Logo Cultivares" class="loader-logo animate__animated animate__fadeInUp">
+            <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia.</p>
+        </div>
+    </div>
+
     <header class="header">
-<div class="container header-container">
-    <a href="index.html" class="logo">
-        <img src="img/logos/logo2.png" alt="Logo Cultivares" style="height: 50px;">
-    </a>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
-        </ul>
-    </nav>
-    <button class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-    </button>
-</div>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logos/logo2.png" alt="Logo Cultivares" style="height: 50px;">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
         <div class="mobile-menu">
             <ul>
                 <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
-                <li><a href="productos.html">Productos</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li> <li><a href="productos.html">Productos</a></li>
                 <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
             </ul>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="hero-carousel">
                 <img src="img/carrusel/carrusel1.jpg" alt="Mango Fresco 1">
                 <img src="img/carrusel/carrusel2.jpg" alt="Mango Fresco 2">
                 <img src="img/carrusel/carrusel3.jpg" alt="Mango Fresco 3">
                 <img src="img/carrusel/carrusel4.jpg" alt="Mango Fresco 4">
-                </div>
+            </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="container">
@@ -166,19 +172,13 @@
                         <li><a href="productos.html">Productos</a></li>
                         <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
-                        <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook" src=""></i></a>
-                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin" src=""></i></a>
-
-
-                        <!-- aui solo descomenten esto y adregen el link corespondiente -->
-                        <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
-                        <!-- <a href="#"><i class="fab fa-twitter" src=""></i></a> -->
+                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <div class="contact-info">
                         <p>Email: info@Cultivares.com</p>
@@ -194,5 +194,5 @@
 
     <script src="/js/js.js"></script>
     <script src="/js/carrusel.js"></script>
-</body>
+    <script src="/js/carga.js"></script> </body>
 </html>

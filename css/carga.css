@@ -1,0 +1,81 @@
+/* loader.css */
+
+/* Contenedor principal del loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7; /* Un blanco muy suave o gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Contenedor para el logo y el texto */
+.loader-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Aumenta el espacio entre el logo y el texto si es necesario */
+}
+
+/* Estilos para el logo dentro del loader */
+.loader-logo {
+    width: 250px; /* ¡Aumentamos el tamaño del logo a 250px! */
+    height: auto;
+    max-width: 90%; /* Asegura que no se desborde en pantallas muy pequeñas */
+}
+
+/* Estilos para el texto de carga */
+.loader-text {
+    font-size: 1.6em;
+    color: #4a4a4a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    /* --- ELIMINAMOS ESTAS PROPIEDADES PARA QUITAR LA RAYA AMARILLA Y EL EFECTO TYPING --- */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    /* border-right: .15em solid orange; */
+    /* animation: */
+        /* typing 3.5s steps(30, end) forwards, */
+        /* blink-caret .75s step-end infinite; */
+    /* opacity: 0; */ /* Esto lo manejaremos con Animate.css directamente ahora */
+    /* max-width: 0; */
+    /* --- FIN DE LAS PROPIENADES ELIMINADAS --- */
+}
+
+/* --- ELIMINAMOS ESTAS KEYFRAMES SI YA NO USAMOS EL EFECTO TYPING --- */
+/* @keyframes typing { */
+/* from { max-width: 0 } */
+/* to { max-width: 100% } */
+/* } */
+
+/* @keyframes blink-caret { */
+/* from, to { border-color: transparent } */
+/* 50% { border-color: #ff9800; } */
+/* } */
+/* --- FIN DE KEYFRAMES ELIMINADAS --- */
+
+
+/* CLASES DEL BODY para controlar la visibilidad del contenido */
+
+/* Oculta el contenido principal (header, main, footer) cuando el body tiene la clase 'loading' */
+body.loading #main-content,
+body.loading header,
+body.loading footer {
+    display: none;
+    opacity: 0;
+}
+
+/* Muestra el contenido principal cuando el body tiene la clase 'loaded' */
+body.loaded #main-content,
+body.loaded header,
+body.loaded footer {
+    display: block; /* O el display original que tenías (flex, grid, etc.) */
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}

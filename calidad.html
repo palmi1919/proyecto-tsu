@@ -6,13 +6,23 @@
     <title>Seguridad Alimentaria y Calidad - Cultivares</title>
     <meta name="description" content="Conoce nuestros rigurosos procesos de control de calidad y seguridad alimentaria que garantizan la excelencia de nuestros productos.">
     <link rel="stylesheet" href="/css/styles.css">
+    
+    <link rel="stylesheet" href="/css/carga.css">
+
     <link rel="icon" type="image/png" sizes="32x32" href="/img/logos/grupo_cultivares_logo.png">
-
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="loading"> <div id="loader-wrapper">
+        <div class="loader-content">
+            <img src="img/logos/logo2.png" alt="Logo Cultivares" class="loader-logo animate__animated animate__fadeInUp">
+            <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia.</p>
+        </div>
+    </div>
+
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
@@ -25,7 +35,6 @@
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="calidad.html" class="active">Seguridad Alimentaria y Calidad</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
-                    <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
                 </ul>
             </nav>
             <button class="mobile-menu-btn">
@@ -39,21 +48,17 @@
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="calidad.html" class="active">Seguridad Alimentaria y Calidad</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
             </ul>
         </div>
     </header>
 
-    <main>
-        <!-- Header -->
-        <section class="page-header">
+    <main id="main-content"> <section class="page-header">
             <div class="container">
                 <h1>Seguridad Alimentaria y Calidad</h1>
                 <p>Conoce nuestros rigurosos procesos de control de calidad y seguridad alimentaria que garantizan la excelencia de nuestros productos.</p>
             </div>
         </section>
 
-        <!-- Quality Overview -->
         <section class="quality-overview">
             <div class="container">
                 <div class="quality-grid">
@@ -70,7 +75,6 @@
             </div>
         </section>
 
-        <!-- Certificaciones -->
         <section class="certifications-section">
             <div class="container">
                 <h2 class="section-title">Certificaciones</h2>
@@ -107,7 +111,6 @@
             </div>
         </section>
 
-        <!-- Control de Calidad -->
         <section class="quality-process">
             <div class="container">
                 <h2 class="section-title">Nuestro Proceso de Control de Calidad</h2>
@@ -165,8 +168,6 @@
             </div>
         </section>
 
-        <!-- Seguridad Alimentaria -->
-
         <section class="food-safety">
             <div class="container">
                 <h2 class="section-title">Seguridad Alimentaria</h2>
@@ -202,7 +203,6 @@
                         <div class="accordion-header">
                             <button class="accordion-btn">Buenas Prácticas de Manufactura</button>
                         </div>
-                    <div class="accordion-item"></div>
                         <div class="accordion-content">
                             <p>Aplicamos estrictas Buenas Prácticas de Manufactura (BPM) en todas nuestras instalaciones, asegurando condiciones higiénicas óptimas durante el procesamiento y empaque de nuestros mangos.</p>
                             <p>Nuestro personal recibe capacitación continua sobre higiene y manipulación segura de alimentos, reforzando nuestro compromiso con la calidad y seguridad.</p>
@@ -220,8 +220,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Nuestro Laboratorio -->
 
         <section class="laboratory-section">
             <div class="container">
@@ -246,7 +244,6 @@
             </div>
         </section>
 
-        <!-- Calidad y Sostenibilidad -->
         <section class="sustainability-section">
             <div class="container">
                 <h2 class="section-title">Calidad y Sostenibilidad</h2>
@@ -284,16 +281,13 @@
                         <li><a href="productos.html">Productos</a></li>
                         <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
-                        <!-- <li><a href="vacantes.html">Vacantes</a></li> -->
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook" src=""></i></a>
-                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin" src=""></i></a>
-                        <!-- <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <div class="contact-info">
                         <p>Email: info@Cultivares.com</p>
@@ -308,5 +302,6 @@
     </footer>
 
     <script src="/js/js.js"></script>
+    <script src="/js/carga.js"></script>
 </body>
 </html>

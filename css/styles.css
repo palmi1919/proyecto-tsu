@@ -1,15 +1,15 @@
 /* Base Styles */
 :root {
-    --primary-color: #388E3C;      /* Nuevo Verde Principal (Verde Bosque) */
-    --primary-dark: #2E7D32;       /* Un poco más oscuro para hover/active del primary */
-    --primary-light: #C8E6C9;      /* Un verde muy claro para fondos sutiles */
-    --secondary-color: #F8FAF8;   /* Blanco roto o gris muy claro para fondos (anteriormente #f8fafc) */
-    --text-color: #424242;         /* Nuevo Gris Carbón para texto principal (anteriormente #334155) */
-    --text-muted: #757575;         /* Un gris medio para texto secundario/parrafos (anteriormente #64748b) */
-    --accent-color: #FDBE02;       /* El color que te dieron para acentos sutiles */
+    --primary-color: #388E3C;     
+    --primary-dark: #2E7D32;        
+    --primary-light: #C8E6C9;  
+    --secondary-color: #F8FAF8;     
+    --text-color: #424242;         
+    --text-muted: #757575;          
+    --accent-color: #FDBE02;        
     --background-color: #ffffff;
-    --border-color: #E0E0E0;       /* Ligeramente ajustado (anteriormente #e2e8f0) */
-    --shadow-color: rgba(0, 0, 0, 0.08); /* Un poco más oscuro para mejor presencia (anteriormente rgba(0, 0, 0, 0.05)) */
+    --border-color: #E0E0E0;        
+    --shadow-color: rgba(0, 0, 0, 0.08); 
     --radius: 0.5rem;
     --transition: all 0.3s ease;
 }
@@ -72,6 +72,8 @@ h3 {
 p {
     margin-bottom: 1rem;
     color: var(--text-color); /* Asegura que los párrafos usen el color de texto principal */
+    /* --- CAMBIO AQUÍ: Justificar todos los párrafos por defecto --- */
+    text-align: justify;
 }
 
 .section-title {
@@ -81,7 +83,7 @@ p {
 }
 
 .section-description {
-    text-align: center;
+    text-align: center; /* Este es un texto de descripción, generalmente se centra */
     max-width: 800px;
     margin: 0 auto 2.5rem;
     color: var(--text-muted);
@@ -262,7 +264,7 @@ p {
     width: 100%;
     height: 100%;
     background: transparent;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .hero-content {
@@ -287,6 +289,11 @@ p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     color: white; /* El texto del párrafo del hero sigue siendo blanco */
+    /* La justificación para párrafos generales ya debería aplicarse,
+       pero aquí se sobrescribe si quieres un alineado diferente para el hero.
+       Para que el hero no se justifique (y se vea mejor centrado si es corto),
+       podrías añadir text-align: center; aquí si es necesario.
+       Por ahora, mantendrá la justificación global. */
 }
 
 .hero-buttons {
@@ -335,6 +342,7 @@ p {
 
 .feature-card p {
     color: var(--text-muted);
+    /* La justificación global a 'p' aplica aquí. Si quisieras centrado: text-align: center; */
 }
 
 /* Products Preview */
@@ -409,6 +417,8 @@ p {
     font-size: 0.9rem;
     opacity: 0.9;
     color: white; /* Párrafo del overlay blanco */
+    /* --- CAMBIO AQUÍ: Justificar el texto en el overlay si es más de una línea --- */
+    text-align: justify;
 }
 
 /* CTA Section */
@@ -416,7 +426,7 @@ p {
     padding: 5rem 0;
     background-color: var(--primary-color); /* Nuevo verde principal */
     color: white;
-    text-align: center;
+    text-align: center; /* El texto en un CTA suele estar centrado */
 }
 
 .cta h2 {
@@ -432,6 +442,8 @@ p {
     margin-left: auto;
     margin-right: auto;
     color: white;
+    /* --- CAMBIO AQUÍ: Sobreescribir la justificación para centrar el texto del CTA --- */
+    text-align: center;
 }
 
 /* Footer */
@@ -457,6 +469,8 @@ p {
 .footer-col p, .footer-col li {
     color: var(--text-muted);
     font-size: 0.9rem;
+    /* La justificación global a 'p' aplica aquí. Para el footer, a menudo se prefiere izquierda. */
+    /* Si quieres texto del footer alineado a la izquierda, puedes añadir: text-align: left; */
 }
 
 .footer-col ul li {
@@ -491,10 +505,11 @@ p {
 
 .contact-info p {
     margin-bottom: 0.5rem;
+    /* La justificación global a 'p' aplica aquí. Podrías forzar left si lo prefieres. */
 }
 
 .footer-bottom {
-    text-align: center;
+    text-align: center; /* El copyright suele ir centrado */
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
@@ -515,6 +530,8 @@ p {
 .page-header p {
     color: var(--text-muted);
     max-width: 800px;
+    /* Este párrafo suele ser una descripción corta, a menudo centrada o a la izquierda.
+       Si quieres que sea justificado, la regla global de 'p' ya lo hará. */
 }
 
 /* About Page */
@@ -536,6 +553,8 @@ p {
 .about-content p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
+    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido principal de "Quiénes Somos" --- */
+    text-align: justify;
 }
 
 .about-image {
@@ -576,6 +595,8 @@ p {
 
 .mission-card p, .vision-card p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de misión/visión --- */
+    text-align: justify;
 }
 
 .values-section {
@@ -607,6 +628,8 @@ p {
 .value-card p {
     color: var(--text-muted);
     padding-left: 2.25rem;
+    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de valores --- */
+    text-align: justify;
 }
 
 .team-section {
@@ -648,6 +671,8 @@ p {
 
 .team-info p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en la información del equipo --- */
+    text-align: justify;
 }
 
 /* Products Page */
@@ -767,6 +792,11 @@ p {
     padding: 1.5rem;
 }
 
+.packaging-info p {
+    /* --- CAMBIO AQUÍ: Justificar el texto en la información de empaque --- */
+    text-align: justify;
+}
+
 .packaging-info ul {
     list-style: disc;
     padding-left: 1.5rem;
@@ -793,6 +823,8 @@ p {
 .classification-info p {
     color: var(--text-muted);
     margin-bottom: 2rem;
+    /* --- CAMBIO AQUÍ: Justificar el texto en la información de clasificación --- */
+    text-align: justify;
 }
 
 .classification-grid {
@@ -835,6 +867,7 @@ p {
 
 .certifications p {
     margin-bottom: 2rem;
+    /* La justificación global a 'p' aplica aquí. */
 }
 
 .certifications-grid {
@@ -877,6 +910,8 @@ p {
 .quality-content p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
+    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido de calidad --- */
+    text-align: justify;
 }
 
 .quality-image {
@@ -929,6 +964,8 @@ p {
 
 .certification-feature p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en las características de certificación --- */
+    text-align: justify;
 }
 
 .quality-process {
@@ -964,7 +1001,7 @@ p {
 
 .timeline-marker {
     position: absolute;
-    left: -3rem;
+    left: -3.50rem;
     top: -0.50rem;
     width: 3rem;
     height: 3rem;
@@ -984,6 +1021,8 @@ p {
 
 .timeline-content p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido de la línea de tiempo --- */
+    text-align: justify;
 }
 
 .process-image {
@@ -1049,6 +1088,8 @@ p {
 .accordion-content p {
     color: var(--text-muted);
     margin-bottom: 1rem;
+    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido del acordeón --- */
+    text-align: justify;
 }
 
 .laboratory-section {
@@ -1081,6 +1122,8 @@ p {
 .laboratory-content p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
+    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido del laboratorio --- */
+    text-align: justify;
 }
 
 .laboratory-content ul {
@@ -1119,6 +1162,8 @@ p {
 
 .sustainability-card p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de sostenibilidad --- */
+    text-align: justify;
 }
 
 /* Contact Page */
@@ -1158,6 +1203,7 @@ p {
 
 .info-item p {
     color: var(--text-muted);
+    /* La justificación global a 'p' aplica aquí. Podrías forzar left si lo prefieres. */
 }
 
 .location-map h2 {
@@ -1287,6 +1333,8 @@ p {
 
 .faq-answer p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en las respuestas de FAQ --- */
+    text-align: justify;
 }
 
 /* Vacancies Page */
@@ -1327,6 +1375,8 @@ p {
 
 .benefit-card p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de beneficios --- */
+    text-align: justify;
 }
 
 .vacancies-section {
@@ -1384,6 +1434,8 @@ p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    /* --- CAMBIO AQUÍ: Justificar la descripción de la vacante --- */
+    text-align: justify;
 }
 
 .modal {
@@ -1469,12 +1521,14 @@ p {
 
 .step-content p {
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido de los pasos del proceso --- */
+    text-align: justify;
 }
 
 .open-application {
     padding: 5rem 0;
-    background-color: var(--primary-light); /* Fondo de aplicación abierta con verde muy claro */
-    text-align: center;
+    background-color: var(--primary-light); 
+    text-align: center; /* Este es un texto de CTA, usualmente centrado */
 }
 
 .open-application h2 {
@@ -1485,6 +1539,8 @@ p {
     max-width: 800px;
     margin: 0 auto 2rem;
     color: var(--text-muted);
+    /* --- CAMBIO AQUÍ: Sobreescribir la justificación para centrar el texto del CTA --- */
+    text-align: center;
 }
 
 /* Responsive Styles */
@@ -1496,27 +1552,27 @@ p {
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .about-image {
         height: 600px;
         width: 100%;
     }
 
     .quality-image {
-        height: 250px; 
-        width: 100%; 
+        height: 250px;
+        width: 100%;
     }
 
     .process-image {
-        height: 280px; 
-        width: 100%; 
+        height: 280px;
+        width: 100%;
     }
 
     .laboratory-image {
         height: 320px;
-        width: 100%; 
+        width: 100%;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -1526,33 +1582,33 @@ p {
     .main-nav {
         display: none;
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .mobile-menu.active {
         display: block;
     }
-    
+
     .hero-text h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero-text p {
         font-size: 1.1rem;
     }
-    
+
     .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
-    
+
     .tab-header {
         flex-direction: column;
     }
-    
+
     .tab-btn {
         width: 100%;
         text-align: center;
@@ -1563,27 +1619,27 @@ p {
     .hero {
         height: 60vh;
     }
-    
+
     .hero-text h1 {
         font-size: 2rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
     }
-    
+
     .hero-buttons .btn {
         width: 100%;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.75rem;
     }
-    
+
     .modal-content {
         margin: 5% auto;
         padding: 1.5rem;
