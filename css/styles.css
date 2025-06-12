@@ -1,14 +1,15 @@
 /* Base Styles */
 :root {
-    --primary-color: #22c55e;     /* Cambiado de #f97316 (naranja) a #22c55e (verde) */
-    --primary-dark: #16a34a;      /* Cambiado de #ea580c (naranja oscuro) a #16a34a (verde oscuro) */
-    --primary-light: #dcfce7;     /* Cambiado de #ffedd5 (naranja claro) a #dcfce7 (verde claro) */
-    --secondary-color: #f8fafc;
-    --text-color: #334155;
-    --text-muted: #64748b;
+    --primary-color: #388E3C;      /* Nuevo Verde Principal (Verde Bosque) */
+    --primary-dark: #2E7D32;       /* Un poco más oscuro para hover/active del primary */
+    --primary-light: #C8E6C9;      /* Un verde muy claro para fondos sutiles */
+    --secondary-color: #F8FAF8;   /* Blanco roto o gris muy claro para fondos (anteriormente #f8fafc) */
+    --text-color: #424242;         /* Nuevo Gris Carbón para texto principal (anteriormente #334155) */
+    --text-muted: #757575;         /* Un gris medio para texto secundario/parrafos (anteriormente #64748b) */
+    --accent-color: #FDBE02;       /* El color que te dieron para acentos sutiles */
     --background-color: #ffffff;
-    --border-color: #e2e8f0;
-    --shadow-color: rgba(0, 0, 0, 0.05);
+    --border-color: #E0E0E0;       /* Ligeramente ajustado (anteriormente #e2e8f0) */
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Un poco más oscuro para mejor presencia (anteriormente rgba(0, 0, 0, 0.05)) */
     --radius: 0.5rem;
     --transition: all 0.3s ease;
 }
@@ -53,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
+    color: var(--text-color); /* Asegura que los títulos usen el color de texto principal */
 }
 
 h1 {
@@ -69,11 +71,13 @@ h3 {
 
 p {
     margin-bottom: 1rem;
+    color: var(--text-color); /* Asegura que los párrafos usen el color de texto principal */
 }
 
 .section-title {
     text-align: center;
     margin-bottom: 2.5rem;
+    color: var(--text-color); /* Título de sección con color de texto principal */
 }
 
 .section-description {
@@ -117,7 +121,7 @@ p {
 
 .btn-white {
     background-color: white;
-    color: var(--primary-color);
+    color: var(--primary-color); /* El color del texto del botón blanco será el verde primario */
 }
 
 .btn-white:hover {
@@ -133,6 +137,19 @@ p {
 .btn-outline:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Nuevo botón de acento (opcional, para usar el #FDBE02) */
+.btn-accent {
+    background-color: var(--accent-color);
+    color: var(--text-color); /* O 'white' si contrasta bien */
+    border: 1px solid var(--accent-color);
+}
+
+.btn-accent:hover {
+    background-color: #E6A800; /* Un tono un poco más oscuro para el hover del acento */
+    border-color: #E6A800;
+}
+
 
 /* Header */
 .header {
@@ -153,7 +170,7 @@ p {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Logo en el nuevo verde principal */
 }
 
 .main-nav ul {
@@ -167,7 +184,7 @@ p {
 }
 
 .main-nav a:hover, .main-nav a.active {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Links activos y hover en el nuevo verde principal */
 }
 
 .mobile-menu-btn {
@@ -207,18 +224,36 @@ p {
     position: relative;
     height: 70vh;
     min-height: 500px;
-    color: white;
+    color: white; /* Color del texto dentro del hero, ya que el overlay podría ser oscuro */
     overflow: hidden;
 }
 
-.hero img {
+/* Carrusel de Imágenes en Hero */
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Asegura que esté por debajo del overlay y el contenido */
+}
+
+.hero-carousel img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
+
+.hero-carousel img.active {
+    opacity: 1;
+}
+/* Fin Carrusel */
 
 .hero-overlay {
     position: absolute;
@@ -226,13 +261,13 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(34, 197, 94, 0.7), rgba(22, 163, 74, 0.7)); /* Cambiado a tonos de verde */
-    z-index: 1;
+    background: transparent;
+    z-index: 1; 
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Mayor que el overlay, para que el texto sea visible */
     height: 100%;
     display: flex;
     align-items: center;
@@ -245,11 +280,13 @@ p {
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: white; /* El texto principal del hero sigue siendo blanco */
 }
 
 .hero-text p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    color: white; /* El texto del párrafo del hero sigue siendo blanco */
 }
 
 .hero-buttons {
@@ -281,8 +318,8 @@ p {
 .feature-icon {
     width: 4rem;
     height: 4rem;
-    background-color: var(--primary-light);
-    color: var(--primary-color);
+    background-color: var(--primary-light); /* Nuevo verde muy claro */
+    color: var(--primary-color); /* Nuevo verde principal */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -293,6 +330,7 @@ p {
 
 .feature-card h3 {
     margin-bottom: 1rem;
+    color: var(--text-color); /* Asegura que los títulos de las tarjetas usen el color de texto principal */
 }
 
 .feature-card p {
@@ -314,7 +352,7 @@ p {
 .view-all {
     display: flex;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Ver todo en el nuevo verde principal */
     font-weight: 500;
 }
 
@@ -357,23 +395,26 @@ p {
     left: 0;
     width: 100%;
     padding: 1.5rem;
+    /* Mantenemos el degradado oscuro para que el texto del producto sea legible */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     color: white;
 }
 
 .product-overlay h3 {
     margin-bottom: 0.5rem;
+    color: white; /* Título del overlay blanco */
 }
 
 .product-overlay p {
     font-size: 0.9rem;
     opacity: 0.9;
+    color: white; /* Párrafo del overlay blanco */
 }
 
 /* CTA Section */
 .cta {
     padding: 5rem 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Nuevo verde principal */
     color: white;
     text-align: center;
 }
@@ -381,6 +422,7 @@ p {
 .cta h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .cta p {
@@ -389,6 +431,7 @@ p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    color: white;
 }
 
 /* Footer */
@@ -408,6 +451,7 @@ p {
 .footer-col h3 {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
+    color: var(--text-color); /* Títulos del footer con color de texto principal */
 }
 
 .footer-col p, .footer-col li {
@@ -420,7 +464,7 @@ p {
 }
 
 .footer-col ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Links del footer en hover con verde principal */
 }
 
 .social-links {
@@ -465,6 +509,7 @@ p {
 
 .page-header h1 {
     margin-bottom: 0.5rem;
+    color: var(--text-color); /* Título de página con color de texto principal */
 }
 
 .page-header p {
@@ -496,7 +541,8 @@ p {
 .about-image {
     border-radius: var(--radius);
     overflow: hidden;
-    height: 400px;
+    height: 850px;
+    width: 100%;
 }
 
 .about-image img {
@@ -524,7 +570,7 @@ p {
 }
 
 .mission-card h3, .vision-card h3 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Nuevos verdes */
     margin-bottom: 1rem;
 }
 
@@ -553,7 +599,7 @@ p {
 }
 
 .value-header i {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Nuevos verdes */
     margin-right: 1rem;
     font-size: 1.25rem;
 }
@@ -596,7 +642,7 @@ p {
 }
 
 .team-position {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Nuevos verdes */
     margin-bottom: 1rem;
 }
 
@@ -627,10 +673,11 @@ p {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    color: var(--text-color); /* Color por defecto del botón de tab */
 }
 
 .tab-btn:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Hover en verde principal */
 }
 
 .tab-btn.active {
@@ -681,8 +728,8 @@ p {
 }
 
 .product-tags span {
-    background-color: var(--primary-light);
-    color: var(--primary-dark);
+    background-color: var(--primary-light); /* Nuevo verde muy claro */
+    color: var(--primary-dark); /* Nuevo verde oscuro */
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.8rem;
@@ -762,6 +809,7 @@ p {
 
 .classification-card h4 {
     margin-bottom: 0.75rem;
+    color: var(--text-color); /* Título de clasificación con color de texto principal */
 }
 
 .classification-card ul {
@@ -775,13 +823,13 @@ p {
 }
 
 .certifications {
-    background-color: var(--primary-light);
+    background-color: var(--primary-light); /* Nuevo verde muy claro */
     border-radius: var(--radius);
     padding: 2rem;
 }
 
 .certifications h3 {
-    color: var(--primary-dark);
+    color: var(--primary-dark); /* Nuevo verde oscuro */
     margin-bottom: 1rem;
 }
 
@@ -906,7 +954,7 @@ p {
     top: 0;
     height: 100%;
     width: 1px;
-    background-color: var(--primary-light);
+    background-color: var(--primary-light); /* Color de la línea de tiempo */
 }
 
 .timeline-item {
@@ -920,7 +968,7 @@ p {
     top: -0.50rem;
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Marcador de tiempo con verde principal */
     color: white;
     border-radius: 50%;
     display: flex;
@@ -979,6 +1027,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--text-color); /* Color del botón de acordeón */
 }
 
 .accordion-btn::after {
@@ -1047,7 +1096,7 @@ p {
 
 .sustainability-section {
     padding: 5rem 0;
-    background-color: var(--primary-light);
+    background-color: var(--primary-light); /* Sección de sostenibilidad con verde muy claro */
 }
 
 .sustainability-grid {
@@ -1064,7 +1113,7 @@ p {
 }
 
 .sustainability-card h3 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Títulos de sostenibilidad con verde principal */
     margin-bottom: 1rem;
 }
 
@@ -1097,7 +1146,7 @@ p {
 }
 
 .info-item i {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Iconos de contacto con verde principal */
     font-size: 1.25rem;
     margin-right: 1rem;
     margin-top: 0.25rem;
@@ -1157,10 +1206,11 @@ p {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    color: var(--text-color); /* Etiquetas de formulario con color de texto principal */
 }
 
 .form-group .required {
-    color: red;
+    color: var(--accent-color); /* El asterisco de requerido puede ser el color de acento */
 }
 
 .form-group input,
@@ -1172,13 +1222,15 @@ p {
     border-radius: var(--radius);
     font-family: inherit;
     font-size: 1rem;
+    color: var(--text-color); /* Texto de entrada con color de texto principal */
+    background-color: var(--background-color); /* Fondo de inputs con el color de fondo */
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--primary-color); /* Borde en focus con verde principal */
 }
 
 .faq-section {
@@ -1214,6 +1266,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--text-color); /* Color del botón de FAQ */
 }
 
 .faq-btn::after {
@@ -1258,8 +1311,8 @@ p {
 .benefit-icon {
     width: 4rem;
     height: 4rem;
-    background-color: var(--primary-light);
-    color: var(--primary-color);
+    background-color: var(--primary-light); /* Verde muy claro */
+    color: var(--primary-color); /* Verde principal */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1318,7 +1371,7 @@ p {
 }
 
 .vacancy-detail i {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Iconos de detalle de vacante con verde principal */
     margin-right: 0.75rem;
 }
 
@@ -1362,6 +1415,7 @@ p {
     right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--text-color); /* Color del botón de cerrar modal */
 }
 
 .process-section {
@@ -1385,7 +1439,7 @@ p {
     top: 0;
     height: 100%;
     width: 1px;
-    background-color: var(--primary-light);
+    background-color: var(--primary-light); /* Color de la línea de tiempo del proceso */
 }
 
 .process-step {
@@ -1399,7 +1453,7 @@ p {
     top: 0.25rem;
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Marcador de paso con verde principal */
     color: white;
     border-radius: 50%;
     display: flex;
@@ -1419,7 +1473,7 @@ p {
 
 .open-application {
     padding: 5rem 0;
-    background-color: var(--primary-light);
+    background-color: var(--primary-light); /* Fondo de aplicación abierta con verde muy claro */
     text-align: center;
 }
 
@@ -1443,11 +1497,24 @@ p {
         grid-template-columns: 1fr;
     }
     
-    .about-image,
-    .quality-image,
-    .process-image,
+    .about-image {
+        height: 600px;
+        width: 100%;
+    }
+
+    .quality-image {
+        height: 250px; 
+        width: 100%; 
+    }
+
+    .process-image {
+        height: 280px; 
+        width: 100%; 
+    }
+
     .laboratory-image {
-        height: 300px;
+        height: 320px;
+        width: 100%; 
     }
     
     .form-row {
