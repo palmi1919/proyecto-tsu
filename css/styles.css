@@ -505,18 +505,21 @@ p {
 
 .contact-info p {
     margin-bottom: 0.5rem;
-    /* La justificación global a 'p' aplica aquí. Podrías forzar left si lo prefieres. */
 }
 
 .footer-bottom {
-    text-align: center; /* El copyright suele ir centrado */
+    text-align: center; 
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
     font-size: 0.9rem;
 }
 
-/* Page Header */
+.footer-bottom p {
+    text-align: center !important; 
+    margin-bottom: 0;
+}
+
 .page-header {
     background-color: var(--secondary-color);
     padding: 3rem 0;
@@ -530,11 +533,8 @@ p {
 .page-header p {
     color: var(--text-muted);
     max-width: 800px;
-    /* Este párrafo suele ser una descripción corta, a menudo centrada o a la izquierda.
-       Si quieres que sea justificado, la regla global de 'p' ya lo hará. */
 }
 
-/* About Page */
 .about-section {
     padding: 5rem 0;
 }
@@ -553,7 +553,6 @@ p {
 .about-content p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
-    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido principal de "Quiénes Somos" --- */
     text-align: justify;
 }
 
@@ -589,13 +588,12 @@ p {
 }
 
 .mission-card h3, .vision-card h3 {
-    color: var(--primary-color); /* Nuevos verdes */
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .mission-card p, .vision-card p {
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de misión/visión --- */
     text-align: justify;
 }
 
@@ -620,7 +618,7 @@ p {
 }
 
 .value-header i {
-    color: var(--primary-color); /* Nuevos verdes */
+    color: var(--primary-color);
     margin-right: 1rem;
     font-size: 1.25rem;
 }
@@ -628,7 +626,6 @@ p {
 .value-card p {
     color: var(--text-muted);
     padding-left: 2.25rem;
-    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de valores --- */
     text-align: justify;
 }
 
@@ -665,17 +662,15 @@ p {
 }
 
 .team-position {
-    color: var(--primary-color); /* Nuevos verdes */
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .team-info p {
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Justificar el texto en la información del equipo --- */
     text-align: justify;
 }
 
-/* Products Page */
 .products-section {
     padding: 5rem 0;
 }
@@ -698,11 +693,11 @@ p {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
-    color: var(--text-color); /* Color por defecto del botón de tab */
+    color: var(--text-color);
 }
 
 .tab-btn:hover {
-    color: var(--primary-color); /* Hover en verde principal */
+    color: var(--primary-color);
 }
 
 .tab-btn.active {
@@ -753,8 +748,8 @@ p {
 }
 
 .product-tags span {
-    background-color: var(--primary-light); /* Nuevo verde muy claro */
-    color: var(--primary-dark); /* Nuevo verde oscuro */
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.8rem;
@@ -793,7 +788,6 @@ p {
 }
 
 .packaging-info p {
-    /* --- CAMBIO AQUÍ: Justificar el texto en la información de empaque --- */
     text-align: justify;
 }
 
@@ -823,7 +817,6 @@ p {
 .classification-info p {
     color: var(--text-muted);
     margin-bottom: 2rem;
-    /* --- CAMBIO AQUÍ: Justificar el texto en la información de clasificación --- */
     text-align: justify;
 }
 
@@ -841,7 +834,7 @@ p {
 
 .classification-card h4 {
     margin-bottom: 0.75rem;
-    color: var(--text-color); /* Título de clasificación con color de texto principal */
+    color: var(--text-color); 
 }
 
 .classification-card ul {
@@ -855,19 +848,18 @@ p {
 }
 
 .certifications {
-    background-color: var(--primary-light); /* Nuevo verde muy claro */
+    background-color: var(--primary-light);
     border-radius: var(--radius);
     padding: 2rem;
 }
 
 .certifications h3 {
-    color: var(--primary-dark); /* Nuevo verde oscuro */
+    color: var(--primary-dark);
     margin-bottom: 1rem;
 }
 
 .certifications p {
     margin-bottom: 2rem;
-    /* La justificación global a 'p' aplica aquí. */
 }
 
 .certifications-grid {
@@ -1005,7 +997,7 @@ p {
     top: -0.50rem;
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary-color); /* Marcador de tiempo con verde principal */
+    background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -1021,7 +1013,6 @@ p {
 
 .timeline-content p {
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido de la línea de tiempo --- */
     text-align: justify;
 }
 
@@ -1066,7 +1057,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--text-color); /* Color del botón de acordeón */
+    color: var(--text-color);
 }
 
 .accordion-btn::after {
@@ -1088,7 +1079,6 @@ p {
 .accordion-content p {
     color: var(--text-muted);
     margin-bottom: 1rem;
-    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido del acordeón --- */
     text-align: justify;
 }
 
@@ -1122,7 +1112,6 @@ p {
 .laboratory-content p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
-    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido del laboratorio --- */
     text-align: justify;
 }
 
@@ -1139,7 +1128,7 @@ p {
 
 .sustainability-section {
     padding: 5rem 0;
-    background-color: var(--primary-light); /* Sección de sostenibilidad con verde muy claro */
+    background-color: var(--primary-light);
 }
 
 .sustainability-grid {
@@ -1156,17 +1145,15 @@ p {
 }
 
 .sustainability-card h3 {
-    color: var(--primary-color); /* Títulos de sostenibilidad con verde principal */
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .sustainability-card p {
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de sostenibilidad --- */
     text-align: justify;
 }
 
-/* Contact Page */
 .contact-section {
     padding: 5rem 0;
 }
@@ -1191,7 +1178,7 @@ p {
 }
 
 .info-item i {
-    color: var(--primary-color); /* Iconos de contacto con verde principal */
+    color: var(--primary-color);
     font-size: 1.25rem;
     margin-right: 1rem;
     margin-top: 0.25rem;
@@ -1203,7 +1190,6 @@ p {
 
 .info-item p {
     color: var(--text-muted);
-    /* La justificación global a 'p' aplica aquí. Podrías forzar left si lo prefieres. */
 }
 
 .location-map h2 {
@@ -1252,11 +1238,11 @@ p {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: var(--text-color); /* Etiquetas de formulario con color de texto principal */
+    color: var(--text-color);
 }
 
 .form-group .required {
-    color: var(--accent-color); /* El asterisco de requerido puede ser el color de acento */
+    color: var(--accent-color);
 }
 
 .form-group input,
@@ -1268,15 +1254,15 @@ p {
     border-radius: var(--radius);
     font-family: inherit;
     font-size: 1rem;
-    color: var(--text-color); /* Texto de entrada con color de texto principal */
-    background-color: var(--background-color); /* Fondo de inputs con el color de fondo */
+    color: var(--text-color); 
+    background-color: var(--background-color);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color); /* Borde en focus con verde principal */
+    border-color: var(--primary-color); 
 }
 
 .faq-section {
@@ -1312,7 +1298,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--text-color); /* Color del botón de FAQ */
+    color: var(--text-color); 
 }
 
 .faq-btn::after {
@@ -1333,11 +1319,9 @@ p {
 
 .faq-answer p {
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Justificar el texto en las respuestas de FAQ --- */
     text-align: justify;
 }
 
-/* Vacancies Page */
 .why-work-section {
     padding: 5rem 0;
 }
@@ -1359,8 +1343,8 @@ p {
 .benefit-icon {
     width: 4rem;
     height: 4rem;
-    background-color: var(--primary-light); /* Verde muy claro */
-    color: var(--primary-color); /* Verde principal */
+    background-color: var(--primary-light); 
+    color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1375,7 +1359,6 @@ p {
 
 .benefit-card p {
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Justificar el texto en las tarjetas de beneficios --- */
     text-align: justify;
 }
 
@@ -1421,7 +1404,7 @@ p {
 }
 
 .vacancy-detail i {
-    color: var(--primary-color); /* Iconos de detalle de vacante con verde principal */
+    color: var(--primary-color);
     margin-right: 0.75rem;
 }
 
@@ -1434,7 +1417,6 @@ p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
     flex-grow: 1;
-    /* --- CAMBIO AQUÍ: Justificar la descripción de la vacante --- */
     text-align: justify;
 }
 
@@ -1467,7 +1449,7 @@ p {
     right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--text-color); /* Color del botón de cerrar modal */
+    color: var(--text-color);
 }
 
 .process-section {
@@ -1491,7 +1473,7 @@ p {
     top: 0;
     height: 100%;
     width: 1px;
-    background-color: var(--primary-light); /* Color de la línea de tiempo del proceso */
+    background-color: var(--primary-light);
 }
 
 .process-step {
@@ -1505,7 +1487,7 @@ p {
     top: 0.25rem;
     width: 3rem;
     height: 3rem;
-    background-color: var(--primary-color); /* Marcador de paso con verde principal */
+    background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -1521,14 +1503,13 @@ p {
 
 .step-content p {
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Justificar el texto en el contenido de los pasos del proceso --- */
     text-align: justify;
 }
 
 .open-application {
     padding: 5rem 0;
     background-color: var(--primary-light); 
-    text-align: center; /* Este es un texto de CTA, usualmente centrado */
+    text-align: center;
 }
 
 .open-application h2 {
@@ -1539,12 +1520,11 @@ p {
     max-width: 800px;
     margin: 0 auto 2rem;
     color: var(--text-muted);
-    /* --- CAMBIO AQUÍ: Sobreescribir la justificación para centrar el texto del CTA --- */
     text-align: center;
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
+/* Responsive */
+@media (max-width: 1000px) {
     .about-grid,
     .quality-grid,
     .process-grid,
