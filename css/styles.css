@@ -1519,7 +1519,7 @@ p {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
     .about-grid,
     .quality-grid,
     .process-grid,
@@ -1529,8 +1529,8 @@ p {
     }
 
     .about-image {
-        height: 500px;
-        width: 150%;
+        height: 300px;
+        width: 100%;
     }
 
     .quality-image {
