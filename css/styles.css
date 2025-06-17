@@ -1536,9 +1536,9 @@ p {
     }
 
     .about-image {
-        height: 500px;
-        width: 120%;
-        object-fit: cover;
+        height: 600px;
+        width: 100%;
+        object-fit: none;
     }
 
 
