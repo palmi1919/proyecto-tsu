@@ -1520,10 +1520,10 @@ p {
 
 /* Responsive */
 /* Estilos generales para pantallas grandes */
-.about-grid {
+/* .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Ejemplo: dos columnas por defecto */
-}
+    grid-template-columns: 1fr 1fr; /* Ejemplo: dos columnas por defecto 
+} */
 
 /* --- Tus estilos para móvil deben ir después --- */
 @media (max-width: 1000px) {
