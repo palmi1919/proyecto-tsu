@@ -1537,7 +1537,7 @@ p {
 
     .about-image {
         height: 500px;
-        width: 105%;
+        width: 120%;
         object-fit: cover;
     }
 
