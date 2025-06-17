@@ -1536,9 +1536,9 @@ p {
     }
 
     .about-image {
-        height: 600px;
+        height: 35rem;
         width: 100%;
-        object-fit: none;
+        object-fit: cover; /* Asegura que la imagen cubra el área */
     }
 
 
