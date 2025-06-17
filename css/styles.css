@@ -1526,7 +1526,7 @@ p {
 } */
 
 /* --- Tus estilos para móvil deben ir después --- */
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     .about-grid,
     .quality-grid,
     .process-grid,
@@ -1537,7 +1537,8 @@ p {
 
     .about-image {
         height: 600px;
-        width: 80%;
+        width: 100%;
+        object-fit: cover;
     }
 
 
