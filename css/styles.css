@@ -1538,7 +1538,8 @@ p {
     .about-image {
         height: 35rem;
         width: 100%;
-        object-fit: cover; /* Asegura que la imagen cubra el área */
+        object-fit: cover;
+        object-position: center; 
     }
 
 
