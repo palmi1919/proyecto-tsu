@@ -82,6 +82,12 @@ p {
     color: var(--primary-dark); /* Título de sección con color de texto principal */
 }
 
+.section-title2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: whitesmoke; /* Título de sección con color de texto principal */
+}
+
 .section-description {
     text-align: center; /* Este es un texto de descripción, generalmente se centra */
     max-width: 800px;
