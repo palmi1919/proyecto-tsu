@@ -79,7 +79,7 @@ p {
 .section-title {
     text-align: center;
     margin-bottom: 2.5rem;
-    color: white; /* Título de sección con color de texto principal */
+    color: var(--primary-dark); /* Título de sección con color de texto principal */
 }
 
 .section-description {
