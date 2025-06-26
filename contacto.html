@@ -6,6 +6,7 @@
     <title>Contacto - Cultivares</title>
     <meta name="description" content="Estamos aquí para responder a tus preguntas y ayudarte con cualquier información que necesites sobre nuestros productos y servicios.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mapa.css">
 
     <link rel="stylesheet" href="css/carga.css">
 
@@ -16,7 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="loading"> <div id="loader-wrapper">
+<body class="loading"> 
+    <div id="loader-wrapper">
         <div class="loader-content">
             <img src="img/logos/logo1.png" alt="Logo Cultivares" class="loader-logo animate__animated animate__fadeInUp">
             <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia.</p>
@@ -91,8 +93,8 @@
                                 <div>
                                     <h3>Email</h3>
                                     <p>
-                                        info@GrupoCultivares.com<br>
-                                        ventas@GrupoCultivares.com
+                                        info@Cultivares.com<br>
+                                        ventas@Cultivares.com
                                     </p>
                                 </div>
                             </div>
@@ -110,14 +112,19 @@
                         </div>
 
                         <div class="location-map">
-                            <h2>Ubicación</h2>
-                            <div class="map-container">
-                                <div class="map-placeholder">
-                                    <p>Mapa de ubicación</p>
-                                </div>
+                            <h2 data-i18n="location_map_title">Ubicación</h2>
+                            <div class="map-container static-image">
+                                <a href="https://maps.google.com/?cid=9483601177362095026"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver ubicación en Google Maps">
+                                    <div class="map-overlay-text">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span data-i18n="click_to_view_map">Haz clic para ver la ubicación en el mapa</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
                     <div class="contact-form-container">
                         <h2>Envíanos un Mensaje</h2>
@@ -252,5 +259,10 @@
 
     <script src="js/js.js"></script>
     <script src="js/carga.js"></script>
+    <script src="js/accordion.js"></script> <script src="https://unpkg.com/i18next/dist/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/dist/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend/dist/i18nextHttpBackend.min.js"></script>
+
+    <script src="js/main.js"></script> 
 </body>
 </html>
