@@ -6,8 +6,6 @@
     <title>Contacto - Cultivares</title>
     <meta name="description" content="Estamos aquí para responder a tus preguntas y ayudarte con cualquier información que necesites sobre nuestros productos y servicios.">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mapa.css">
-
     <link rel="stylesheet" href="css/carga.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="img/logos/grupo_cultivares_logo.png">
@@ -17,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="loading"> 
+<body class="loading">
     <div id="loader-wrapper">
         <div class="loader-content">
             <img src="img/logos/logo1.png" alt="Logo Cultivares" class="loader-logo animate__animated animate__fadeInUp">
@@ -54,7 +52,8 @@
         </div>
     </header>
 
-    <main id="main-content"> <section class="page-header">
+    <main id="main-content">
+        <section class="page-header">
             <div class="container">
                 <h1>Contacto</h1>
                 <p>Estamos aquí para responder a tus preguntas y ayudarte con cualquier información que necesites sobre nuestros productos y servicios.</p>
@@ -70,34 +69,53 @@
                             <div class="info-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <h3>Dirección</h3>
+                                    <h3>Planta Empacadora</h3>
                                     <p>
-                                        Carretera Internacional km 123<br>
-                                        Col. Industrial, CP 12345<br>
-                                        Ciudad Mango, México
+                                        Carretera Internacional Chametla KM1, S/N <br>
+                                        El Tazajal, El Rosario, Sinaloa CP. 82802
                                     </p>
                                 </div>
                             </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Teléfono</h3>
+                                    <p>+52 (669) 991 3885</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>contacto@Cultivares.com.mx</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Oficinas Admistrativas</h3>
+                                    <p>
+                                        Fruta-Exporta S.A. de C.V. <br>
+                                        Blvd Rosales #379 Local 106, Col. Centro <br>
+                                        Los Mochis, Ahome, Sinaloa, México CP. 81200 <br>
+                                    </p>
+                                </div>
+                            </div>
+
                             <div class="info-item">
                                 <i class="fas fa-phone"></i>
                                 <div>
                                     <h3>Teléfono</h3>
                                     <p>
-                                        +52 123 456 7890<br>
-                                        +52 123 456 7891
+                                        +52 (669) 112 1230 <br>
+                                        +52 (699) 112 1231
                                     </p>
                                 </div>
                             </div>
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h3>Email</h3>
-                                    <p>
-                                        info@Cultivares.com<br>
-                                        ventas@Cultivares.com
-                                    </p>
-                                </div>
-                            </div>
+
                             <div class="info-item">
                                 <i class="fas fa-clock"></i>
                                 <div>
@@ -110,65 +128,66 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="location-map">
-                            <h2 data-i18n="location_map_title">Ubicación</h2>
-                            <div class="map-container static-image">
-                                <a href="https://maps.google.com/?cid=9483601177362095026"
+                    <div class="location-map">
+                        <h2 data-i18n="location_map_title">Ubicación Planta Empacadora</h2>
+                        <div class="map-container static-image">
+                            <a href="https://www.google.com/maps/place/Cultivares/@22.9269362,-105.8412935,696m/data=!3m2!1e3!4b1!4m6!3m5!1s0x869f1f0e72399b97:0x839c85064824dbb2!8m2!3d22.9269313!4d-105.8387132!16s%2Fg%2F11f3n5xww4?hl=es&entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="Ver ubicación en Google Maps">
-                                    <div class="map-overlay-text">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span data-i18n="click_to_view_map">Haz clic para ver la ubicación en el mapa</span>
-                                    </div>
-                                </a>
+                                aria-label="Ver ubicación de Planta Empacadora en Google Maps">
+                                <div class="map-overlay-text">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span data-i18n="click_to_view_map">Haz clic para ver la ubicación en el mapa</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>Envíanos un Mensaje</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
                             </div>
                         </div>
-
-                    <div class="contact-form-container">
-                        <h2>Envíanos un Mensaje</h2>
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre Completo <span class="required">*</span></label>
-                                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email <span class="required">*</span></label>
-                                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="telefono">Teléfono</label>
-                                    <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
-                                </div>
-                                <div class="form-group">
-                                    <label for="empresa">Empresa</label>
-                                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
                             </div>
                             <div class="form-group">
-                                <label for="asunto">Asunto <span class="required">*</span></label>
-                                <select id="asunto" name="asunto" required>
-                                    <option value="" disabled selected>Selecciona un asunto</option>
-                                    <option value="informacion">Información General</option>
-                                    <option value="ventas">Ventas</option>
-                                    <option value="cotizacion">Solicitud de Cotización</option>
-                                    <option value="distribucion">Distribución</option>
-                                    <option value="otro">Otro</option>
-                                </select>
+                                <label for="empresa">Empresa</label>
+                                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
                             </div>
-                            <div class="form-group">
-                                <label for="mensaje">Mensaje <span class="required">*</span></label>
-                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
-                            </button>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto <span class="required">*</span></label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="" disabled selected>Selecciona un asunto</option>
+                                <option value="informacion">Información General</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="cotizacion">Solicitud de Cotización</option>
+                                <option value="distribucion">Distribución</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje <span class="required">*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -252,17 +271,17 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Cultivares. Todos los derechos reservados.</p>
+                <p>© <span id="current-year"></span> Cultivares. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/js.js"></script>
     <script src="js/carga.js"></script>
-    <script src="js/accordion.js"></script> <script src="https://unpkg.com/i18next/dist/i18next.min.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="https://unpkg.com/i18next/dist/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/dist/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend/dist/i18nextHttpBackend.min.js"></script>
-
-    <script src="js/main.js"></script> 
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 /* Base Styles */
+/* Estas son las variables CSS que definen los colores, tamaños de borde, sombras y transiciones globales de la página. */
 :root {
     --primary-color: #388E3C;
     --primary-dark: #2E7D32;
@@ -14,12 +15,14 @@
     --transition: all 0.3s ease;
 }
 
+/* Resetea los márgenes y paddings por defecto del navegador para un control consistente. */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el ancho/alto del elemento. */
 }
 
+/* Estilos básicos para el cuerpo del documento: fuente, color de texto y color de fondo. */
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
@@ -27,29 +30,34 @@ body {
     background-color: var(--background-color);
 }
 
+/* Contenedor principal que centra el contenido y limita su ancho máximo. */
 .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    max-width: 1200px; /* Ancho máximo para pantallas grandes. */
+    margin: 0 auto; /* Centra el contenedor horizontalmente. */
+    padding: 0 1rem; /* Espaciado lateral para evitar que el contenido toque los bordes. */
 }
 
+/* Estilos para enlaces: quita el subrayado y define transiciones para efectos hover. */
 a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
 }
 
+/* Elimina los puntos de las listas. */
 ul {
     list-style: none;
 }
 
+/* Asegura que las imágenes no se desborden de su contenedor y mantengan su proporción. */
 img {
     max-width: 100%;
     height: auto;
 }
 
 /* Typography */
+/* Estilos generales para encabezados: peso de fuente, altura de línea, margen inferior y color. */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
@@ -58,35 +66,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Tamaño de fuente para el título principal. */
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Tamaño de fuente para títulos de sección. */
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamaño de fuente para subtítulos. */
 }
 
+/* Estilos para párrafos: margen inferior, color y justificación. */
 p {
     margin-bottom: 1rem;
     color: var(--text-color);
-    text-align: justify;
+    text-align: justify; /* Justifica el texto. */
 }
 
+/* Título genérico de sección centrado. */
 .section-title {
     text-align: center;
     margin-bottom: 2.5rem;
     color: var(--primary-dark);
 }
 
+/* Título de sección centrado con color blanco (para secciones con fondo oscuro). */
 .section-title2 {
     text-align: center;
     margin-bottom: 2.5rem;
     color: whitesmoke;
 }
 
+/* Descripción de sección centrada con color blanco y ancho máximo. */
 .section-description {
     text-align: center;
     max-width: 800px;
@@ -95,6 +107,7 @@ p {
 }
 
 /* Buttons */
+/* Estilos base para todos los botones: padding, bordes, fuente y transición. */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -107,40 +120,48 @@ p {
     font-size: 1rem;
 }
 
+/* Botón primario: color de fondo verde. */
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
 }
 
+/* Efecto hover para el botón primario. */
 .btn-primary:hover {
     background-color: var(--primary-dark);
 }
 
+/* Botón secundario: fondo claro con borde. */
 .btn-secondary {
     background-color: var(--secondary-color);
     color: var(--text-color);
     border: 1px solid var(--border-color);
 }
 
+/* Efecto hover para el botón secundario. */
 .btn-secondary:hover {
     background-color: var(--border-color);
 }
 
+/* Botón blanco con texto de color primario. */
 .btn-white {
     background-color: white;
     color: var(--primary-color);
 }
 
+/* Efecto hover para el botón blanco. */
 .btn-white:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+/* Botón con solo borde y fondo transparente. */
 .btn-outline {
     background-color: transparent;
     border: 1px solid white;
     color: white;
 }
 
+/* Efecto hover para el botón outline. */
 .btn-outline:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -159,43 +180,50 @@ p {
 
 
 /* Header */
+/* Encabezado fijo en la parte superior, con fondo blanco y sombra. */
 .header {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Asegura que el encabezado esté por encima de otros elementos. */
     background-color: white;
     box-shadow: 0 2px 10px var(--shadow-color);
 }
 
+/* Contenedor dentro del encabezado para alinear elementos. */
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacia el logo y la navegación. */
     align-items: center;
-    height: 4rem;
+    height: 4rem; /* Altura fija del encabezado. */
 }
 
+/* Estilos para el logo. */
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
 }
 
+/* Navegación principal en modo escritorio. */
 .main-nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.5rem; /* Espacio entre los elementos del menú. */
 }
 
+/* Estilos de los enlaces de navegación. */
 .main-nav a {
     font-weight: 500;
     color: var(--text-color);
 }
 
+/* Efecto hover y estilo para el enlace activo en la navegación principal. */
 .main-nav a:hover, .main-nav a.active {
     color: var(--primary-color);
 }
 
+/* Botón de menú para móviles (oculto por defecto en escritorio). */
 .mobile-menu-btn {
-    display: none;
+    display: none; /* Oculto en pantallas grandes. */
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -203,39 +231,45 @@ p {
     color: var(--text-color);
 }
 
+/* Menú móvil (oculto por defecto). */
 .mobile-menu {
-    display: none;
+    display: none; /* Se mostrará con JavaScript en móviles. */
     padding: 1rem;
     background-color: white;
     border-top: 1px solid var(--border-color);
 }
 
+/* Estilos de la lista dentro del menú móvil. */
 .mobile-menu ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Elementos apilados verticalmente. */
     gap: 1rem;
 }
 
+/* Estilos de los enlaces en el menú móvil. */
 .mobile-menu a {
     display: block;
     padding: 0.5rem 0;
     font-weight: 500;
 }
 
+/* Efecto hover y estilo para el enlace activo en el menú móvil. */
 .mobile-menu a:hover, .mobile-menu a.active {
     color: var(--primary-color);
 }
 
 /* Hero Section */
+/* Sección principal de la página, con altura y color de texto. */
 .hero {
     position: relative;
-    height: 70vh;
-    min-height: 500px;
-    color: white; /* Color del texto dentro del hero, ya que el overlay podría ser oscuro */
+    height: 70vh; /* 70% de la altura de la ventana. */
+    min-height: 500px; /* Altura mínima. */
+    color: white;
     overflow: hidden;
 }
 
 /* Carrusel de Imágenes en Hero */
+/* Contenedor para las imágenes del carrusel en el hero. */
 .hero-carousel {
     position: absolute;
     top: 0;
@@ -243,78 +277,88 @@ p {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 0; /* Asegura que esté por debajo del overlay y el contenido */
+    z-index: 0; /* Asegura que esté por debajo del overlay y el contenido. */
 }
 
+/* Estilo para las imágenes individuales del carrusel (ocultas por defecto). */
 .hero-carousel img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    object-fit: cover; /* Cubre el contenedor sin distorsionar. */
+    opacity: 0; /* Oculta las imágenes por defecto. */
+    transition: opacity 1s ease-in-out; /* Transición para el efecto de fade. */
 }
 
+/* Clase para la imagen activa del carrusel (visible). */
 .hero-carousel img.active {
-    opacity: 1;
+    opacity: 1; /* Hace visible la imagen activa. */
 }
 /* Fin Carrusel */
 
+/* Capa de superposición (overlay) sobre las imágenes del hero para mejorar la legibilidad del texto. */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Desvanecido de negro semitransparente (ajusta la opacidad) */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-    z-index: 1; /* Asegura que el overlay esté sobre las imágenes pero debajo del texto */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* Degradado semitransparente. */
+    z-index: 1; /* Sobre las imágenes pero debajo del texto. */
 }
 
+/* Contenido del hero (texto y botones) posicionado sobre el overlay. */
 .hero-content {
     position: relative;
-    z-index: 2; /* Mayor que el overlay, para que el texto sea visible */
+    z-index: 2; /* Mayor que el overlay, para que el texto sea visible. */
     height: 100%;
     display: flex;
     align-items: center;
 }
 
+/* Estilos para el bloque de texto del hero. */
 .hero-text {
     max-width: 600px;
 }
 
+/* Estilos para el título del hero. */
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: white; /* El texto principal del hero sigue siendo blanco */
+    color: white;
 }
 
+/* Estilos para el párrafo del hero. */
 .hero-text p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     color: white;
 }
 
+/* Contenedor para los botones del hero. */
 .hero-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en varias líneas. */
     gap: 1rem;
 }
 
 /* Features Section */
+/* Sección de características: padding y color de fondo. */
 .features {
     padding: 5rem 0;
     background-color: var(--secondary-color);
 }
 
+/* Diseño de cuadrícula para las tarjetas de características. Se adapta a diferentes anchos. */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas flexibles y responsivas. */
     gap: 2rem;
 }
 
+/* Estilos para cada tarjeta de característica. */
 .feature-card {
     background-color: white;
     padding: 2rem;
@@ -323,6 +367,7 @@ p {
     text-align: center;
 }
 
+/* Icono de la característica. */
 .feature-icon {
     width: 4rem;
     height: 4rem;
@@ -336,27 +381,32 @@ p {
     font-size: 1.5rem;
 }
 
+/* Estilos para el título de la característica. */
 .feature-card h3 {
     margin-bottom: 1rem;
     color: var(--text-color);
 }
 
+/* Estilos para el párrafo de la característica. */
 .feature-card p {
     color: var(--text-muted);
 }
 
 /* Products Preview */
+/* Sección de vista previa de productos. */
 .products-preview {
     padding: 5rem 0;
 }
 
+/* Encabezado de la sección de productos (título y botón "Ver todo"). */
 .section-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacia el título y el botón. */
     align-items: center;
     margin-bottom: 2.5rem;
 }
 
+/* Estilos para el enlace "Ver todo". */
 .view-all {
     display: flex;
     align-items: center;
@@ -368,50 +418,58 @@ p {
     margin-left: 0.5rem;
 }
 
+/* Diseño de cuadrícula para las tarjetas de productos. */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas flexibles. */
     gap: 2rem;
 }
 
+/* Estilos para cada tarjeta de producto. */
 .product-card {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Contenedor de la imagen del producto. */
 .product-image {
     position: relative;
     height: 250px;
     overflow: hidden;
 }
 
+/* Estilos para la imagen dentro de la tarjeta de producto. */
 .product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Efecto de zoom en hover. */
 }
 
+/* Efecto de zoom al pasar el ratón sobre la tarjeta del producto. */
 .product-card:hover .product-image img {
     transform: scale(1.05);
 }
 
+/* Overlay de texto sobre la imagen del producto. */
 .product-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 1.5rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); /* Degradado oscuro. */
     color: white;
 }
 
+/* Estilos para el título del producto en el overlay. */
 .product-overlay h3 {
     margin-bottom: 0.5rem;
     color: white;
 }
 
+/* Estilos para el párrafo del producto en el overlay. */
 .product-overlay p {
     font-size: 0.9rem;
     opacity: 0.9;
@@ -419,7 +477,8 @@ p {
     text-align: justify;
 }
 
-/* CTA Section */
+/* CTA Section (Call To Action) */
+/* Sección de llamada a la acción: fondo, color de texto y centrado. */
 .cta {
     padding: 5rem 0;
     background-color: var(--primary-color);
@@ -427,12 +486,14 @@ p {
     text-align: center;
 }
 
+/* Estilos para el título de la CTA. */
 .cta h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: white;
 }
 
+/* Estilos para el párrafo de la CTA. */
 .cta p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
@@ -444,25 +505,29 @@ p {
 }
 
 /* Footer */
+/* Pie de página: fondo, padding y borde superior. */
 .footer {
     background-color: var(--secondary-color);
     padding: 4rem 0 2rem;
     border-top: 1px solid var(--border-color);
 }
 
+/* Diseño de cuadrícula para las columnas del pie de página. */
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas flexibles. */
     gap: 3rem;
     margin-bottom: 3rem;
 }
 
+/* Estilos para los títulos de las columnas del pie de página. */
 .footer-col h3 {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
 }
 
+/* Estilos para el texto y elementos de lista en el pie de página. */
 .footer-col p, .footer-col li {
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -472,16 +537,19 @@ p {
     margin-bottom: 0.75rem;
 }
 
+/* Efecto hover para los enlaces del pie de página. */
 .footer-col ul li a:hover {
     color: var(--primary-color);
 }
 
+/* Enlaces de redes sociales. */
 .social-links {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
+/* Estilos para cada icono de red social. */
 .social-links a {
     width: 2.5rem;
     height: 2.5rem;
@@ -493,15 +561,18 @@ p {
     color: var(--text-color);
 }
 
+/* Efecto hover para los iconos de redes sociales. */
 .social-links a:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
+/* Información de contacto en el pie de página. */
 .contact-info p {
     margin-bottom: 0.5rem;
 }
 
+/* Sección inferior del pie de página (derechos de autor). */
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -515,32 +586,39 @@ p {
     margin-bottom: 0;
 }
 
+/* Estilos para encabezados de página (ej. en "Quiénes Somos", "Contacto"). */
 .page-header {
     background-color: var(--secondary-color);
     padding: 3rem 0;
 }
 
+/* Estilos para el título del encabezado de página. */
 .page-header h1 {
     margin-bottom: 0.5rem;
     color: var(--text-color);
 }
 
+/* Estilos para el párrafo del encabezado de página. */
 .page-header p {
     color: var(--text-muted);
     max-width: 800px;
 }
 
+/* About Section (Quiénes Somos) */
+/* Sección "Quiénes Somos". */
 .about-section {
     padding: 5rem 0;
 }
 
+/* Diseño de cuadrícula para la sección "Quiénes Somos" (texto e imagen). */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Dos columnas. */
     gap: 3rem;
     align-items: center;
 }
 
+/* Contenido de texto en la sección "Quiénes Somos". */
 .about-content h2 {
     margin-bottom: 1.5rem;
 }
@@ -551,6 +629,7 @@ p {
     text-align: justify;
 }
 
+/* Imagen en la sección "Quiénes Somos". */
 .about-image {
     border-radius: var(--radius);
     overflow: hidden;
@@ -564,17 +643,21 @@ p {
     object-fit: cover;
 }
 
+/* Misión y Visión Section */
+/* Sección de Misión y Visión. */
 .mission-vision {
     padding: 5rem 0;
     background-color: var(--secondary-color);
 }
 
+/* Diseño de cuadrícula para las tarjetas de Misión y Visión. */
 .mission-vision-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+/* Estilos para las tarjetas de Misión y Visión. */
 .mission-card, .vision-card {
     background-color: white;
     padding: 2rem;
@@ -582,59 +665,70 @@ p {
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Títulos de Misión y Visión. */
 .mission-card h3, .vision-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
+/* Párrafos de Misión y Visión. */
 .mission-card p, .vision-card p {
     color: var(--text-muted);
     text-align: justify;
 }
 
+/* Sección de Valores. */
 .values-section {
     padding: 5rem 0;
 }
 
+/* Diseño de cuadrícula para las tarjetas de valores. */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+/* Estilos para cada tarjeta de valor. */
 .value-card {
     padding: 1.5rem;
 }
 
+/* Encabezado de la tarjeta de valor (icono y título). */
 .value-header {
     display: flex;
     align-items: flex-start;
     margin-bottom: 1rem;
 }
 
+/* Icono del valor. */
 .value-header i {
     color: var(--primary-color);
     margin-right: 1rem;
     font-size: 1.25rem;
 }
 
+/* Párrafo del valor. */
 .value-card p {
     color: var(--text-muted);
     padding-left: 2.25rem;
     text-align: justify;
 }
 
+/* Sección del Equipo. */
 .team-section {
     padding: 5rem 0;
     background-color: var(--secondary-color);
 }
 
+/* Diseño de cuadrícula para las tarjetas del equipo. */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+/* Estilos para cada tarjeta del miembro del equipo. */
 .team-card {
     background-color: white;
     border-radius: var(--radius);
@@ -642,6 +736,7 @@ p {
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Contenedor de la imagen del miembro del equipo. */
 .team-image {
     height: 250px;
 }
@@ -652,34 +747,42 @@ p {
     object-fit: cover;
 }
 
+/* Información del miembro del equipo. */
 .team-info {
     padding: 1.5rem;
 }
 
+/* Posición del miembro del equipo. */
 .team-position {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
+/* Descripción del miembro del equipo. */
 .team-info p {
     color: var(--text-muted);
     text-align: justify;
 }
 
+/* Products Section (Página de Productos) */
+/* Sección principal de productos. */
 .products-section {
     padding: 5rem 0;
 }
 
+/* Contenedor para las pestañas de navegación (ej. tipos de mango). */
 .tabs {
     margin-bottom: 2rem;
 }
 
+/* Encabezado de las pestañas. */
 .tab-header {
     display: flex;
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
 }
 
+/* Botones de cada pestaña. */
 .tab-btn {
     padding: 1rem 2rem;
     background: none;
@@ -691,29 +794,35 @@ p {
     color: var(--text-color);
 }
 
+/* Efecto hover para los botones de pestaña. */
 .tab-btn:hover {
     color: var(--primary-color);
 }
 
+/* Estilo para el botón de pestaña activo. */
 .tab-btn.active {
     color: var(--primary-color);
     border-bottom-color: var(--primary-color);
 }
 
+/* Contenido de cada pestaña (oculto por defecto). */
 .tab-content {
     display: none;
 }
 
+/* Contenido de la pestaña activa (visible). */
 .tab-content.active {
     display: block;
 }
 
+/* Diseño de cuadrícula para los productos dentro de cada pestaña. */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+/* Tarjeta de detalle de producto. */
 .product-detail-card {
     background-color: white;
     border-radius: var(--radius);
@@ -721,6 +830,7 @@ p {
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Imagen de detalle del producto. */
 .product-detail-image {
     height: 250px;
 }
@@ -731,10 +841,12 @@ p {
     object-fit: cover;
 }
 
+/* Información de detalle del producto. */
 .product-detail-info {
     padding: 1.5rem;
 }
 
+/* Tags o etiquetas del producto. */
 .product-tags {
     display: flex;
     flex-wrap: wrap;
@@ -742,6 +854,7 @@ p {
     margin: 1rem 0;
 }
 
+/* Estilos para cada tag. */
 .product-tags span {
     background-color: var(--primary-light);
     color: var(--primary-dark);
@@ -750,17 +863,20 @@ p {
     font-size: 0.8rem;
 }
 
+/* Temporada del producto. */
 .product-season {
     font-size: 0.9rem;
     color: var(--text-muted);
 }
 
+/* Diseño de cuadrícula para opciones de empaque. */
 .packaging-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+/* Tarjeta de opción de empaque. */
 .packaging-card {
     background-color: white;
     border-radius: var(--radius);
@@ -768,6 +884,7 @@ p {
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Imagen de empaque. */
 .packaging-image {
     height: 250px;
 }
@@ -778,6 +895,7 @@ p {
     object-fit: cover;
 }
 
+/* Información de empaque. */
 .packaging-info {
     padding: 1.5rem;
 }
@@ -797,6 +915,7 @@ p {
     margin-bottom: 0.5rem;
 }
 
+/* Sección de clasificación de productos. */
 .classification-section {
     background-color: white;
     border-radius: var(--radius);
@@ -805,6 +924,7 @@ p {
     margin-bottom: 2rem;
 }
 
+/* Información de clasificación. */
 .classification-info h3 {
     margin-bottom: 1rem;
 }
@@ -815,12 +935,14 @@ p {
     text-align: justify;
 }
 
+/* Diseño de cuadrícula para las tarjetas de clasificación. */
 .classification-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
+/* Tarjeta de clasificación individual. */
 .classification-card {
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
@@ -842,6 +964,7 @@ p {
     margin-bottom: 0.5rem;
 }
 
+/* Sección de Certificaciones (en la página de productos, si aplica). */
 .certifications {
     background-color: var(--primary-light);
     border-radius: var(--radius);
@@ -857,12 +980,14 @@ p {
     margin-bottom: 2rem;
 }
 
+/* Diseño de cuadrícula para los logos de certificación. */
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
 }
 
+/* Tarjeta de logo de certificación. */
 .certification-card {
     background-color: white;
     border-radius: var(--radius);
@@ -878,11 +1003,13 @@ p {
     margin: 0 auto 1rem;
 }
 
-/* Quality Page */
+/* Quality Page (Seguridad Alimentaria y Calidad) */
+/* Sección de resumen de calidad. */
 .quality-overview {
     padding: 5rem 0;
 }
 
+/* Diseño de cuadrícula para la sección de resumen de calidad. */
 .quality-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -890,6 +1017,7 @@ p {
     align-items: center;
 }
 
+/* Contenido de texto de calidad. */
 .quality-content h2 {
     margin-bottom: 1.5rem;
 }
@@ -900,6 +1028,7 @@ p {
     text-align: justify;
 }
 
+/* Imagen de calidad. */
 .quality-image {
     border-radius: var(--radius);
     overflow: hidden;
@@ -912,17 +1041,20 @@ p {
     object-fit: cover;
 }
 
+/* Sección de certificaciones (en página de calidad). */
 .certifications-section {
     padding: 5rem 0;
     background-color: var(--secondary-color);
 }
 
+/* Diseño de cuadrícula para características de certificación. */
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
+/* Tarjeta de característica de certificación. */
 .certification-feature {
     background-color: white;
     padding: 2rem;
@@ -931,6 +1063,7 @@ p {
     text-align: center;
 }
 
+/* Icono de característica de certificación. */
 .certification-icon {
     width: 4rem;
     height: 4rem;
@@ -944,19 +1077,23 @@ p {
     font-size: 1.5rem;
 }
 
+/* Título de característica de certificación. */
 .certification-feature h3 {
     margin-bottom: 1rem;
 }
 
+/* Párrafo de característica de certificación. */
 .certification-feature p {
     color: var(--text-muted);
     text-align: justify;
 }
 
+/* Sección de proceso de calidad. */
 .quality-process {
     padding: 5rem 0;
 }
 
+/* Diseño de cuadrícula para el proceso de calidad. */
 .process-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -964,11 +1101,13 @@ p {
     align-items: center;
 }
 
+/* Línea de tiempo para el proceso de calidad. */
 .timeline {
     position: relative;
     padding-left: 2rem;
 }
 
+/* Línea vertical de la línea de tiempo. */
 .timeline::before {
     content: '';
     position: absolute;
@@ -979,11 +1118,13 @@ p {
     background-color: var(--primary-light);
 }
 
+/* Cada elemento o paso en la línea de tiempo. */
 .timeline-item {
     position: relative;
     padding-bottom: 2.5rem;
 }
 
+/* Marcador circular en cada paso de la línea de tiempo. */
 .timeline-marker {
     position: absolute;
     left: -3.50rem;
@@ -1000,6 +1141,7 @@ p {
     border: 3px solid white;
 }
 
+/* Contenido del paso de la línea de tiempo. */
 .timeline-content h3 {
     margin-bottom: 0.5rem;
 }
@@ -1009,6 +1151,7 @@ p {
     text-align: justify;
 }
 
+/* Imagen del proceso de calidad. */
 .process-image {
     border-radius: var(--radius);
     overflow: hidden;
@@ -1021,24 +1164,29 @@ p {
     object-fit: cover;
 }
 
+/* Sección de seguridad alimentaria (acordeón). */
 .food-safety {
     padding: 5rem 0;
     background-color: var(--secondary-color);
 }
 
+/* Contenedor del acordeón. */
 .accordion {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Cada elemento del acordeón. */
 .accordion-item {
     border-bottom: 1px solid var(--border-color);
 }
 
+/* Encabezado del acordeón. */
 .accordion-header {
     padding: 1.5rem 0;
 }
 
+/* Botón que expande/contrae el contenido del acordeón. */
 .accordion-btn {
     width: 100%;
     text-align: left;
@@ -1053,17 +1201,20 @@ p {
     color: var(--text-color);
 }
 
+/* Flecha de expansión/contracción del acordeón. */
 .accordion-btn::after {
-    content: '\f107';
+    content: '\f107'; /* Icono de flecha hacia abajo. */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     transition: var(--transition);
 }
 
+/* Rotación de la flecha cuando el acordeón está activo. */
 .accordion-btn.active::after {
-    transform: rotate(180deg);
+    transform: rotate(180deg); /* Gira la flecha hacia arriba. */
 }
 
+/* Contenido del acordeón (oculto por defecto). */
 .accordion-content {
     display: none;
     padding: 0 0 1.5rem;
@@ -1075,10 +1226,13 @@ p {
     text-align: justify;
 }
 
+/* Sección de laboratorio. */
 .laboratory-section {
     padding: 5rem 0;
+    background-color: var(--background-color);
 }
 
+/* Diseño de cuadrícula para la sección de laboratorio. */
 .laboratory-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1086,6 +1240,7 @@ p {
     align-items: center;
 }
 
+/* Imagen del laboratorio. */
 .laboratory-image {
     border-radius: var(--radius);
     overflow: hidden;
@@ -1098,6 +1253,7 @@ p {
     object-fit: cover;
 }
 
+/* Contenido de texto del laboratorio. */
 .laboratory-content h2 {
     margin-bottom: 1.5rem;
 }
@@ -1119,17 +1275,20 @@ p {
     margin-bottom: 0.5rem;
 }
 
+/* Sección de sostenibilidad. */
 .sustainability-section {
     padding: 5rem 0;
     background-color: var(--primary-color);
 }
 
+/* Diseño de cuadrícula para las tarjetas de sostenibilidad. */
 .sustainability-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+/* Tarjeta de sostenibilidad. */
 .sustainability-card {
     background-color: white;
     padding: 2rem;
@@ -1137,39 +1296,50 @@ p {
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Título de sostenibilidad. */
 .sustainability-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
+/* Párrafo de sostenibilidad. */
 .sustainability-card p {
     color: var(--text-muted);
     text-align: justify;
 }
 
+/* Contact Page Specific CSS */
+/* Sección de contacto principal. */
 .contact-section {
     padding: 5rem 0;
 }
 
+/* Diseño de cuadrícula para la información de contacto y el mapa. Se adapta con distintas pantallas. */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: info y mapa. */
     gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: start;
 }
 
+/* Título para la información de contacto. */
 .contact-info h2 {
     margin-bottom: 2rem;
 }
 
+/* Contenedor para los ítems de información (teléfono, email, etc.). */
 .info-items {
     margin-bottom: 3rem;
 }
 
+/* Cada elemento individual de información de contacto. */
 .info-item {
     display: flex;
     margin-bottom: 2rem;
 }
 
+/* Icono dentro del ítem de información. */
 .info-item i {
     color: var(--primary-color);
     font-size: 1.25rem;
@@ -1177,38 +1347,90 @@ p {
     margin-top: 0.25rem;
 }
 
+/* Título dentro del ítem de información. */
 .info-item h3 {
     margin-bottom: 0.5rem;
 }
 
+/* Párrafo dentro del ítem de información. */
 .info-item p {
     color: var(--text-muted);
 }
 
+/* Título de "Ubicación Planta Empacadora". */
 .location-map h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
-.map-container {
-    height: 100px;
-    border-radius: var(--radius);
-    overflow: hidden;
-}
-
-.map-placeholder {
-    width: 100%;
-    height: 100%;
-    background-color: var(--secondary-color);
-    display: flex;
+/* Estilo para el contenedor del mapa cuando es una imagen estática. */
+.map-container.static-image {
+    background-image: url('../img/mapa/mapa.png'); /* Ruta a la imagen del mapa. */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor. */
+    background-position: center; /* Centra la imagen de fondo. */
+    position: relative; /* Necesario para posicionar el overlay de texto. */
+    display: flex; /* Para centrar el contenido del overlay. */
     align-items: center;
     justify-content: center;
-    color: var(--text-muted);
+    height: 400px; /* Altura del contenedor del mapa. */
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Estilos para el enlace que envuelve el overlay del mapa. */
+.map-container.static-image a {
+    display: flex; /* Permite centrar el overlay-text. */
+    flex-direction: column; /* Para apilar el icono y el texto. */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay oscuro semitransparente. */
+    color: white; /* Color del texto del overlay. */
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el overlay del mapa. */
+.map-container.static-image a:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Más oscuro al pasar el ratón. */
+}
+
+/* Texto y icono que aparecen sobre la imagen del mapa. */
+.map-overlay-text {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+/* Estilo para el icono dentro del overlay del mapa. */
+.map-overlay-text i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+/* Estilo para el texto dentro del overlay del mapa. */
+.map-overlay-text span {
+    color: white;
+}
+
+/* El formulario de contacto abarca todo el ancho. */
+.contact-form-container {
+    padding-top: 2rem;
+}
+
+/* Título del formulario de contacto. */
 .contact-form-container h2 {
     margin-bottom: 2rem;
+    text-align: center;
 }
 
+/* Estilos para el formulario de contacto. */
 .contact-form {
     background-color: white;
     padding: 2rem;
@@ -1216,6 +1438,7 @@ p {
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+/* Fila de campos del formulario (para dos columnas). */
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1223,10 +1446,12 @@ p {
     margin-bottom: 1.5rem;
 }
 
+/* Grupo de campo individual en el formulario. */
 .form-group {
     margin-bottom: 1.5rem;
 }
 
+/* Estilos para las etiquetas de los campos del formulario. */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
@@ -1234,10 +1459,12 @@ p {
     color: var(--text-color);
 }
 
+/* Estilo para el asterisco de campo requerido. */
 .form-group .required {
     color: var(--accent-color);
 }
 
+/* Estilos para los inputs, selects y textareas del formulario. */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1251,6 +1478,7 @@ p {
     background-color: var(--background-color);
 }
 
+/* Efecto focus en los campos del formulario. */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -1258,16 +1486,19 @@ p {
     border-color: var(--primary-color);
 }
 
+/* Sección de Preguntas Frecuentes. */
 .faq-section {
     padding: 5rem 0;
     background-color: var(--secondary-color);
 }
 
+/* Contenedor del acordeón de preguntas frecuentes. */
 .faq-accordion {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Cada elemento de pregunta frecuente. */
 .faq-item {
     background-color: white;
     border-radius: var(--radius);
@@ -1276,10 +1507,12 @@ p {
     overflow: hidden;
 }
 
+/* Contenedor de la pregunta. */
 .faq-question {
     padding: 1.5rem;
 }
 
+/* Botón de la pregunta (para expandir/contraer). */
 .faq-btn {
     width: 100%;
     text-align: left;
@@ -1294,6 +1527,7 @@ p {
     color: var(--text-color);
 }
 
+/* Flecha de expansión/contracción del FAQ. */
 .faq-btn::after {
     content: '\f107';
     font-family: 'Font Awesome 5 Free';
@@ -1301,10 +1535,12 @@ p {
     transition: var(--transition);
 }
 
+/* Rotación de la flecha cuando el FAQ está activo. */
 .faq-btn.active::after {
     transform: rotate(180deg);
 }
 
+/* Contenido de la respuesta (oculto por defecto). */
 .faq-answer {
     display: none;
     padding: 0 1.5rem 1.5rem;
@@ -1315,16 +1551,19 @@ p {
     text-align: justify;
 }
 
+/* Sección "Por qué trabajar con nosotros". */
 .why-work-section {
     padding: 5rem 0;
 }
 
+/* Diseño de cuadrícula para los beneficios. */
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
+/* Tarjeta de beneficio. */
 .benefit-card {
     background-color: white;
     padding: 2rem;
@@ -1333,6 +1572,7 @@ p {
     text-align: center;
 }
 
+/* Icono de beneficio. */
 .benefit-icon {
     width: 4rem;
     height: 4rem;
@@ -1346,26 +1586,31 @@ p {
     font-size: 1.5rem;
 }
 
+/* Título de beneficio. */
 .benefit-card h3 {
     margin-bottom: 1rem;
 }
 
+/* Párrafo de beneficio. */
 .benefit-card p {
     color: var(--text-muted);
     text-align: justify;
 }
 
+/* Sección de vacantes. */
 .vacancies-section {
     padding: 5rem 0;
     background-color: var(--secondary-color);
 }
 
+/* Diseño de cuadrícula para las tarjetas de vacantes. */
 .vacancies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+/* Tarjeta de vacante. */
 .vacancy-card {
     background-color: white;
     border-radius: var(--radius);
@@ -1376,14 +1621,17 @@ p {
     height: 100%;
 }
 
+/* Encabezado de la vacante. */
 .vacancy-header {
     margin-bottom: 1.5rem;
 }
 
+/* Departamento de la vacante. */
 .vacancy-department {
     color: var(--text-muted);
 }
 
+/* Detalles de la vacante (ej. ubicación, tipo de contrato). */
 .vacancy-details {
     display: flex;
     flex-direction: column;
@@ -1391,51 +1639,58 @@ p {
     margin-bottom: 1.5rem;
 }
 
+/* Cada detalle individual de la vacante. */
 .vacancy-detail {
     display: flex;
     align-items: center;
 }
 
+/* Icono del detalle de la vacante. */
 .vacancy-detail i {
     color: var(--primary-color);
     margin-right: 0.75rem;
 }
 
+/* Texto del detalle de la vacante. */
 .vacancy-detail span {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
 
+/* Descripción de la vacante. */
 .vacancy-description {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
-    flex-grow: 1;
+    flex-grow: 1; /* Permite que el texto ocupe el espacio disponible. */
     text-align: justify;
 }
 
+/* Modal (ventana emergente). */
 .modal {
-    display: none;
+    display: none; /* Oculto por defecto. */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto; /* Permite scroll si el contenido es grande. */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente. */
 }
 
+/* Contenido del modal. */
 .modal-content {
     background-color: white;
-    margin: 10% auto;
+    margin: 10% auto; /* Centra el modal vertical y horizontalmente. */
     padding: 2rem;
     border-radius: var(--radius);
     max-width: 800px;
-    max-height: 80vh;
-    overflow-y: auto;
+    max-height: 80vh; /* Altura máxima del contenido del modal. */
+    overflow-y: auto; /* Scroll vertical si el contenido excede la altura. */
     position: relative;
 }
 
+/* Botón para cerrar el modal. */
 .close-modal {
     position: absolute;
     top: 1rem;
@@ -1445,20 +1700,24 @@ p {
     color: var(--text-color);
 }
 
+/* Sección de proceso (de selección, si aplica). */
 .process-section {
     padding: 5rem 0;
 }
 
+/* Contenedor de la línea de tiempo del proceso. */
 .selection-process {
     max-width: 800px;
     margin: 0 auto;
 }
 
+/* Línea de tiempo del proceso. */
 .process-timeline {
     position: relative;
     padding-left: 2rem;
 }
 
+/* Línea vertical de la línea de tiempo del proceso. */
 .process-timeline::before {
     content: '';
     position: absolute;
@@ -1469,11 +1728,13 @@ p {
     background-color: var(--primary-light);
 }
 
+/* Cada paso en la línea de tiempo del proceso. */
 .process-step {
     position: relative;
     padding-bottom: 3rem;
 }
 
+/* Marcador circular en cada paso del proceso. */
 .step-marker {
     position: absolute;
     left: -1.5rem;
@@ -1490,6 +1751,7 @@ p {
     border: 3px solid white;
 }
 
+/* Contenido del paso del proceso. */
 .step-content h3 {
     margin-bottom: 0.5rem;
 }
@@ -1499,16 +1761,20 @@ p {
     text-align: justify;
 }
 
+/* Sección de aplicación abierta. */
 .open-application {
     padding: 5rem 0;
     background-color: var(--primary-light);
     text-align: center;
 }
 
+/* Título de la sección de aplicación abierta. */
 .open-application h2 {
     margin-bottom: 1rem;
+    color: var(--primary-dark);
 }
 
+/* Párrafo de la sección de aplicación abierta. */
 .open-application p {
     max-width: 800px;
     margin: 0 auto 2rem;
@@ -1517,22 +1783,29 @@ p {
 }
 
 /* Responsive */
+/* Media queries para que la página sea responsiva en distintos dispositivos. */
+/* Esto se aplica a pantallas con un ancho máximo de 992px (tabletas grandes y hacia abajo). */
 @media (max-width: 992px) {
+    /* Las cuadrículas de estas secciones pasan de 2 columnas a 1 columna. */
     .about-grid,
     .quality-grid,
     .process-grid,
-    .laboratory-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .laboratory-grid {
+        grid-template-columns: 1fr; /* Una sola columna. */
     }
 
+    /* La cuadrícula de la sección de contacto también pasa a una sola columna. */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Una sola columna para la información y el mapa. */
+    }
+
+    /* Ajustes de altura y posicionamiento de imágenes en distintas secciones para ser responsivas. */
     .about-image {
         height: 33rem;
         width: 100%;
         object-fit: cover;
         object-position: center;
     }
-
 
     .quality-image {
         height: 250px;
@@ -1549,73 +1822,91 @@ p {
         width: 100%;
     }
 
+    /* Las filas de formularios también pasan a una sola columna. */
     .form-row {
         grid-template-columns: 1fr;
     }
 }
 
+/* Esto se aplica a pantallas con un ancho máximo de 768px (tabletas pequeñas y móviles). */
 @media (max-width: 768px) {
+    /* La navegación principal se oculta para dar paso al menú móvil. */
     .main-nav {
         display: none;
     }
 
+    /* El botón del menú móvil se hace visible. */
     .mobile-menu-btn {
         display: block;
     }
 
+    /* El menú móvil se muestra cuando tiene la clase 'active'. */
     .mobile-menu.active {
         display: block;
     }
 
+    /* Ajuste del tamaño de fuente del título principal del hero. */
     .hero-text h1 {
         font-size: 2.5rem;
     }
 
+    /* Ajuste del tamaño de fuente del párrafo del hero. */
     .hero-text p {
         font-size: 1.1rem;
     }
 
+    /* El encabezado de sección pasa a un diseño de columna en pantallas más pequeñas. */
     .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
 
+    /* Los encabezados de las pestañas pasan a un diseño de columna. */
     .tab-header {
         flex-direction: column;
     }
 
+    /* Los botones de las pestañas ocupan todo el ancho. */
     .tab-btn {
         width: 100%;
         text-align: center;
     }
 }
 
+/* Esto se aplica a pantallas con un ancho máximo de 576px (móviles). */
 @media (max-width: 576px) {
+    /* Ajuste de la altura del hero para móviles. */
     .hero {
         height: 60vh;
     }
 
+    /* Nuevo ajuste del tamaño de fuente para el título principal del hero en móviles muy pequeños. */
     .hero-text h1 {
         font-size: 2rem;
     }
 
+    /* Los botones del hero se apilan verticalmente. */
     .hero-buttons {
         flex-direction: column;
     }
 
+    /* Cada botón del hero ocupa todo el ancho. */
     .hero-buttons .btn {
         width: 100%;
     }
 
+    /* Ajuste del tamaño de fuente para el h1 general. */
     h1 {
         font-size: 2rem;
     }
 
+    /* Ajuste del tamaño de fuente para el h2 general. */
     h2 {
         font-size: 1.75rem;
     }
 
+    /* Ajuste del margen y padding del contenido del modal en móviles. */
     .modal-content {
         margin: 5% auto;
         padding: 1.5rem;
