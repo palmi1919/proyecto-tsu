@@ -1782,10 +1782,7 @@ p {
     text-align: center;
 }
 
-/* Responsive */
-/* Media queries para que la página sea responsiva en distintos dispositivos. */
-/* Esto se aplica a pantallas con un ancho máximo de 992px (tabletas grandes y hacia abajo). */
-@media (max-width: 992px) {
+@media (max-width: 1500px) {
     /* Las cuadrículas de estas secciones pasan de 2 columnas a 1 columna. */
     .about-grid,
     .quality-grid,
@@ -1801,7 +1798,7 @@ p {
 
     /* Ajustes de altura y posicionamiento de imágenes en distintas secciones para ser responsivas. */
     .about-image {
-        height: 33rem;
+        height: 50rem;
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -1828,7 +1825,10 @@ p {
     }
 }
 
-@media (max-width: 1500px) {
+/* Responsive */
+/* Media queries para que la página sea responsiva en distintos dispositivos. */
+/* Esto se aplica a pantallas con un ancho máximo de 992px (tabletas grandes y hacia abajo). */
+@media (max-width: 992px) {
     /* Las cuadrículas de estas secciones pasan de 2 columnas a 1 columna. */
     .about-grid,
     .quality-grid,
@@ -1844,7 +1844,7 @@ p {
 
     /* Ajustes de altura y posicionamiento de imágenes en distintas secciones para ser responsivas. */
     .about-image {
-        height: 50rem;
+        height: 33rem;
         width: 100%;
         object-fit: cover;
         object-position: center;
