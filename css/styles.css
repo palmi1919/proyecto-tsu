@@ -1828,6 +1828,49 @@ p {
     }
 }
 
+@media (max-width: 1500px) {
+    /* Las cuadrículas de estas secciones pasan de 2 columnas a 1 columna. */
+    .about-grid,
+    .quality-grid,
+    .process-grid,
+    .laboratory-grid {
+        grid-template-columns: 1fr; /* Una sola columna. */
+    }
+
+    /* La cuadrícula de la sección de contacto también pasa a una sola columna. */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Una sola columna para la información y el mapa. */
+    }
+
+    /* Ajustes de altura y posicionamiento de imágenes en distintas secciones para ser responsivas. */
+    .about-image {
+        height: 50rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .quality-image {
+        height: 250px;
+        width: 100%;
+    }
+
+    .process-image {
+        height: 280px;
+        width: 100%;
+    }
+
+    .laboratory-image {
+        height: 320px;
+        width: 100%;
+    }
+
+    /* Las filas de formularios también pasan a una sola columna. */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Esto se aplica a pantallas con un ancho máximo de 768px (tabletas pequeñas y móviles). */
 @media (max-width: 768px) {
     /* La navegación principal se oculta para dar paso al menú móvil. */
