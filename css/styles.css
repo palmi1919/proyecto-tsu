@@ -1798,7 +1798,7 @@ p {
 
     /* Ajustes de altura y posicionamiento de imágenes en distintas secciones para ser responsivas. */
     .about-image {
-        height: 50rem;
+        height: 60rem;
         width: 100%;
         object-fit: cover;
         object-position: center;
