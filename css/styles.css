@@ -738,7 +738,7 @@ p {
 
 /* Contenedor de la imagen del miembro del equipo. */
 .team-image {
-    height: 250px;
+    height: 360x;
 }
 
 .team-image img {
@@ -1782,6 +1782,245 @@ p {
     text-align: center;
 }
 
+/* ========================================================== */
+/* --- CLASES DE ANIMACIÓN --- */
+/* ========================================================== */
+
+/* 1. ESTADO INICIAL: Elementos de texto con animación */
+/* Todas las palabras que tienen esta clase comienzan invisibles y ligeramente desplazadas */
+.animated-text-element {
+    opacity: 0;
+    transform: translateY(10px); /* Empieza 10px abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Duración reducida a 0.6s */
+    transition-delay: 0s;
+}
+
+/* 2. ESTADO INICIAL: Contenedores que se animan al hacer scroll (aparecen desde abajo) */
+/* Secciones o bloques que tienen esta clase comienzan invisibles y más desplazados hacia abajo */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px); /* Empieza 30px abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition-delay: 0.1s; /* Pequeño retraso para que la sección aparezca con suavidad */
+}
+
+/* 3. ESTADO INICIAL: Elementos que se animan deslizando desde la izquierda */
+.animate-slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px); /* Empieza 50px a la izquierda */
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transition-delay: 0s; /* Sin retraso inicial, el retraso se aplicará cuando el padre sea visible */
+}
+
+/* 4. ESTADO INICIAL: Elementos que se animan deslizando desde la derecha */
+.animate-slide-in-right {
+    opacity: 0;
+    transform: translateX(50px); /* Empieza 50px a la derecha */
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transition-delay: 0s; /* Sin retraso inicial, el retraso se aplicará cuando el padre sea visible */
+}
+
+
+/* 5. ESTADO VISIBLE GENERAL: Cuando el JavaScript (Intersection Observer) añade la clase 'is-visible' */
+/* Esta regla es fundamental para que todos los elementos con 'animate-on-scroll',
+   'animate-slide-in-left', y 'animate-slide-in-right' se hagan visibles
+   y se muevan a su posición final cuando entren en el viewport. */
+.animate-on-scroll.is-visible,
+.animate-slide-in-left.is-visible,
+.animate-slide-in-right.is-visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0); /* Vuelve a su posición original */
+}
+
+/* 6. ESTADO ACTIVO PARA TEXTO: Cuando el JS lo activa directamente */
+/* La función `animateTextElements` en JS añade esta clase.
+   Esto es útil para elementos de texto que no están dentro de un .animate-on-scroll
+   o para control más directo. */
+.animated-text-element.text-active {
+    opacity: 1;
+    transform: translateY(0); /* Se mueve a su posición original */
+}
+
+/* 7. ¡LA REGLA CRÍTICA PARA APARICIÓN ESCALONADA DE TEXTO DENTRO DE SECCIONES! */
+/* Cuando un contenedor .animate-on-scroll se vuelve .is-visible,
+   los textos .animated-text-element DENTRO de él también se hacen visibles
+   con un pequeño retraso individual para el efecto de "cascada". */
+.animate-on-scroll.is-visible .animated-text-element {
+    opacity: 1;
+    transform: translateY(0);
+    /* Puedes añadir un pequeño retraso aquí para que las palabras aparezcan con un ligero escalonamiento
+       después de que la sección principal ya esté visible. */
+    transition-delay: 0.2s; /* Ejemplo de retraso para los hijos. Reduce a 0.1s o 0.05s para más rapidez. */
+}
+
+/* 8. Para las transiciones específicas de elementos en carruseles o secciones heroicas
+   que usan la clase 'text-active' para controlar su animación de entrada. */
+.carousel-slide.active .animated-text-element,
+.hero-text .animated-text-element.text-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s; /* Ajusta este para el texto del carrusel/hero */
+}
+
+
+/* También, si alguna palabra animada tiene la clase .is-visible directamente */
+/* Esta regla es un fallback o para casos específicos donde el JS le da .is-visible directamente a un texto. */
+.animated-text-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================================== */
+/* --- EFECTOS HOVER Y TRANSICIONES GENERALES --- */
+/* (Mantén estas reglas para los efectos interactivos) */
+/* ========================================================== */
+
+/* Botones */
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas (como .feature-card, .product-card, .info-item) */
+.card, .info-item, .product-detail-card, .packaging-card, .classification-card, .certification-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover, .info-item:hover, .product-detail-card:hover, .packaging-card:hover, .classification-card:hover, .certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Íconos (como los de Font Awesome en social-links o info-items) */
+.icon {
+    transition: transform 0.3s ease;
+}
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Enlaces de navegación y footer */
+.main-nav ul li a,
+.footer-link, /* Asegúrate de usar esta clase si tus enlaces del footer la tienen */
+.view-all {
+    transition: color 0.3s ease;
+}
+.main-nav ul li a:hover,
+.footer-link:hover,
+.view-all:hover {
+    color: var(--primary-color); /* Asumiendo que tienes esta variable definida */
+}
+
+
+
+/* Sección de Mango Deshidratado */
+.dehydrated-mango-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Un fondo ligeramente diferente para destacarla */
+    text-align: center;
+    overflow: hidden; /* Asegura que las animaciones de entrada no muestren barras de scroll */
+}
+
+.dehydrated-mango-section .container {
+    max-width: 1200px; /* Ancho máximo para el contenido */
+}
+
+.dehydrated-mango-section .section-divider {
+    border-top: 2px solid #5cb85c; /* Línea verde */
+    margin: 40px auto 30px auto; /* Espaciado alrededor de la línea */
+    width: 80%; /* Ancho de la línea */
+    position: relative;
+    padding-top: 20px; /* Espacio para el texto encima de la línea */
+}
+
+.dehydrated-mango-section .section-divider span {
+    background-color: #f9f9f9; /* Color de fondo igual al de la sección para que el texto "corte" la línea */
+    padding: 0 20px;
+    position: absolute;
+    top: -12px; /* Ajusta para centrar verticalmente sobre la línea */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+}
+
+.dehydrated-mango-section .section-title {
+    font-size: 2.8em;
+    color: #2e7d32; /* Un verde más oscuro para el título */
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.dehydrated-mango-section .dehydrated-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+.dehydrated-mango-section .dehydrated-image {
+    width: 100%; /* La imagen ocupará todo el ancho disponible */
+    max-width: 1000px; /* Puedes ajustar esto para controlar el tamaño máximo de la imagen */
+    margin-bottom: 20px;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.dehydrated-mango-section .dehydrated-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    border-radius: 8px;
+}
+
+.dehydrated-mango-section .dehydrated-description {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
+    margin-bottom: 40px;
+}
+
+/* Estilos para el botón verde (si no lo tienes ya en styles.css) */
+.btn-green {
+    display: inline-block;
+    background-color: #4CAF50; /* Un verde vibrante */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-green:hover {
+    background-color: #45a049; /* Verde ligeramente más oscuro al pasar el mouse */
+}
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .dehydrated-mango-section .section-title {
+        font-size: 2em;
+    }
+
+    .dehydrated-mango-section .section-divider {
+        width: 90%;
+    }
+
+    .dehydrated-mango-section .section-divider span {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+}
+
+
 @media (max-width: 1500px) {
     /* Las cuadrículas de estas secciones pasan de 2 columnas a 1 columna. */
     .about-grid,
@@ -1805,12 +2044,12 @@ p {
     }
 
     .quality-image {
-        height: 250px;
+        height: 300px;
         width: 100%;
     }
 
     .process-image {
-        height: 280px;
+        height: 300px;
         width: 100%;
     }
 

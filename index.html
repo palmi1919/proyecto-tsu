@@ -7,7 +7,8 @@
     <meta name="description" content="Empresa líder en empaque y distribución de mangos de alta calidad">
     
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/carga.css"> <link rel="icon" type="image/png" sizes="32x32" href="img/logos/grupo_cultivares_logo.png">
+    <link rel="stylesheet" href="css/carga.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logos/grupo_cultivares_logo.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -54,18 +55,22 @@
 
     <main id="main-content">
         <section class="hero">
-            <div class="hero-carousel">
-                <img src="img/carrusel/carrusel1.jpg" alt="Mango Fresco 1">
-                <img src="img/carrusel/carrusel2.jpg" alt="Mango Fresco 2">
-                <img src="img/carrusel/carrusel3.jpg" alt="Mango Fresco 3">
-                <img src="img/carrusel/carrusel4.jpg" alt="Mango Fresco 4">
+            <div class="hero-carousel carousel-slides-container"> 
+                <img src="img/carrusel/carrusel1.jpg" alt="Mango Fresco 1" class="carousel-slide active"> 
+                <img src="img/carrusel/carrusel2.jpg" alt="Mango Fresco 2" class="carousel-slide">
+                <img src="img/carrusel/carrusel3.jpg" alt="Mango Fresco 3" class="carousel-slide">
+                <img src="img/carrusel/carrusel4.jpg" alt="Mango Fresco 4" class="carousel-slide">
+                <img src="img/carrusel/carrusel5.jpg" alt="Mango Fresco 5" class="carousel-slide">
+                <img src="img/carrusel/carrusel6.webp" alt="Mango Fresco 5" class="carousel-slide">
+                <img src="img/carrusel/carrusel7.jpg" alt="Mango Fresco 5" class="carousel-slide">
+
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="container">
                     <div class="hero-text">
-                        <h1>La mejor calidad en mangos</h1>
-                        <p>Empacamos y distribuimos los mangos más frescos y deliciosos para el mercado nacional e internacional.</p>
+                        <h1 class="animated-text-element">La mejor calidad en mangos</h1>
+                        <p class="animated-text-element">Empacamos y distribuimos delicioso mango fresco y deshidratado para el mercado nacional e internacional</p>
                         <div class="hero-buttons">
                             <a href="productos.html" class="btn btn-white">Ver Productos</a>
                             <a href="contacto.html" class="btn btn-outline">Contáctanos</a>
@@ -75,7 +80,7 @@
             </div>
         </section>
 
-        <section class="features">
+        <section class="features animate-on-scroll">
             <div class="container">
                 <h2 class="section-title">¿Por qué elegirnos?</h2>
                 <div class="features-grid">
@@ -111,14 +116,14 @@
             </div>
         </section>
 
-        <section class="products-preview">
+        <section class="products-preview animate-on-scroll">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Nuestros Productos</h2>
-                    <a href="productos.html" class="view-all">Ver todos los productos <i class="fas fa-arrow-right"></i></a>
+                    <a href="productos.html" class="view-all nav-link">Ver todos los productos <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="products-grid">
-                    <div class="product-card">
+                    <div class="product-card card">
                         <div class="product-image">
                             <img src="img/mangos/ataulfo.png" alt="Mango Ataulfo">
                             <div class="product-overlay">
@@ -127,7 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card card">
                         <div class="product-image">
                             <img src="img/mangos/Tommy.png" alt="Mango Tommy">
                             <div class="product-overlay">
@@ -136,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <div class="product-card card">
                         <div class="product-image">
                             <img src="img/mangos/Kent.png" alt="Mango Kent">
                             <div class="product-overlay">
@@ -149,10 +154,10 @@
             </div>
         </section>
 
-        <section class="cta">
+        <section class="cta animate-on-scroll">
             <div class="container">
-                <h2>¿Interesado en nuestros productos?</h2>
-                <p>Contáctanos hoy mismo para obtener más información sobre nuestros productos y servicios.</p>
+                <h2 class="animated-text-element">¿Interesado en nuestros productos?</h2>
+                <p class="animated-text-element">Contáctanos hoy mismo para obtener más información sobre nuestros productos y servicios.</p>
                 <a href="contacto.html" class="btn btn-white">Contáctanos Ahora</a>
             </div>
         </section>
@@ -168,22 +173,24 @@
                 <div class="footer-col">
                     <h3>Enlaces Rápidos</h3>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="calidad.html">Seguridad Alimentaria y Calidad</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="quienes-somos.html" class="footer-link">¿Quiénes Somos?</a></li>
+                        <li><a href="productos.html" class="footer-link">Productos</a></li>
+                        <li><a href="calidad.html" class="footer-link">Seguridad Alimentaria y Calidad</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook icon"></i></a>
+                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin icon"></i></a>
                     </div>
                     <div class="contact-info">
-                        <p>Email: contacto@cultivares.com.mx</p>
-                        <p>Teléfono: +52 669 991 3885</p>
+                        <p>Email: contacto@Cultivares.com.mx</p>
+                        <p>Teléfono 1: +52 (694) 952 6061</p>
+                        <p>Teléfono 2: +52 (694) 952 6062</p>
+                        <p>Teléfono 3: +52 (694) 952 0209</p>
                     </div>
                 </div>
             </div>
@@ -196,4 +203,6 @@
     <script src="js/js.js"></script>
     <script src="js/carrusel.js"></script>
     <script src="js/carga.js"></script>
+    <script src="js/animations.js" defer></script> 
+    </body>
 </html>
