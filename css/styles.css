@@ -738,13 +738,20 @@ p {
 
 /* Contenedor de la imagen del miembro del equipo. */
 .team-image {
-    height: 360x;
+    width: 250px; 
+    width: 100%;
+    height: 250px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
 }
 
 .team-image img {
-    width: 100%;
+    width: 100%; 
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; 
+    display: block;
 }
 
 /* Información del miembro del equipo. */
@@ -932,12 +939,16 @@ p {
 .classification-info p {
     color: var(--text-muted);
     margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 0rem;
     text-align: justify;
 }
 
 /* Diseño de cuadrícula para las tarjetas de clasificación. */
 .classification-grid {
     display: grid;
+    margin: 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }

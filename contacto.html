@@ -5,21 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Cultivares</title>
     <meta name="description" content="Estamos aquí para responder a tus preguntas y ayudarte con cualquier información que necesites sobre nuestros productos y servicios.">
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/carga.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="img/logos/grupo_cultivares_logo.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos CSS adicionales para ocultar y mostrar los grupos de campos */
+        .form-fields-group {
+            display: none; /* Por defecto, todos los grupos de campos están ocultos */
+        }
+        .form-fields-group.active {
+            display: block; /* Muestra el grupo activo */
+        }
+        .form-group.full-width {
+            width: 100%;
+        }
+        .form-group small {
+            display: block;
+            margin-top: 5px;
+            color: #777;
+            font-size: 0.85em;
+        }
+        .required {
+            color: red;
+            font-weight: bold;
+        }
+        .error-field {
+            border-color: red !important;
+        }
+    </style>
 </head>
 <body class="loading">
     <div id="loader-wrapper">
         <div class="loader-content">
             <img src="img/logos/logo1.png" alt="Logo Cultivares" class="loader-logo animate__animated animate__fadeInUp">
-            <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia.</p>
+            <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia</p>
         </div>
     </div>
 
@@ -66,8 +92,10 @@
                     <div class="contact-info animate-on-scroll">
                         <h2 class="animated-text-element">Información de Contacto</h2>
                         <div class="info-items">
-                            <div class="info-item card animate-on-scroll"> <i class="fas fa-map-marker-alt icon"></i> <div>
-                                    <h3 class="animated-text-element">Planta Empacadora y Planta Deshidratadora.</h3>
+                            <div class="info-item card animate-on-scroll">
+                                <i class="fas fa-map-marker-alt icon"></i>
+                                <div>
+                                    <h3 class="animated-text-element">Planta Empacadora y Planta Deshidratadora</h3>
                                     <p class="animated-text-element">
                                         Carretera Internacional Chametla KM1, S/N <br>
                                         El Tazajal, El Rosario, Sinaloa CP. 82802
@@ -99,8 +127,8 @@
                                     <h3 class="animated-text-element">Oficinas Administrativas</h3>
                                     <p class="animated-text-element">
                                         Av. Sierra Nevada No. 144,<br>
-                                        Interior 1, Col. Lomas de Mazatlán,o <br>
-                                        C.P. 82110, Mazatlán, Sin. <br>
+                                        Interior 1, Col. Lomas de Mazatlán,<br>
+                                        C.P. 82110, Mazatlán, Sin. <br>
                                     </p>
                                 </div>
                             </div>
@@ -111,7 +139,6 @@
                                     <h3 class="animated-text-element">Teléfono</h3>
                                     <p class="animated-text-element">
                                         (669) 991 3885<br>
-                                        
                                     </p>
                                 </div>
                             </div>
@@ -131,9 +158,9 @@
                     </div>
 
                     <div class="location-map animate-on-scroll">
-                        <h2 data-i18n="location_map_title" class="animated-text-element">Ubicación Planta Empacadora</h2>
+                        <h2 data-i18n="location_map_title" class="animated-text-element">Ubicación Planta Empacadora y Planta Deshidratadora</h2>
                         <div class="map-container static-image">
-                            <a href="https://www.google.com/maps/place/Cultivares/@22.9269362,-105.8412935,696m/data=!3m2!1e3!4b1!4m6!3m5!1s0x869f1f0e72399b97:0x839c85064824dbb2!8m2!3d22.9269313!4d-105.8387132!16s%2Fg%2F11f3n5xww4?hl=es&entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4042871189493!2d-105.93297058498862!3d23.234614384852936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863378378d3b8f67%3A0x60f0d2c9b4e3c5a!2sTu%20Ubicaci%C3%B3n%20Exacta!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Ver ubicación de Planta Empacadora en Google Maps">
@@ -144,48 +171,174 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form-container animate-on-scroll">
                     <h2 class="animated-text-element">Envíanos un Mensaje</h2>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nombre">Nombre Completo <span class="required">*</span></label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="telefono">Teléfono</label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
-                            </div>
-                            <div class="form-group">
-                                <label for="empresa">Empresa</label>
-                                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="asunto">Asunto <span class="required">*</span></label>
-                            <select id="asunto" name="asunto" required>
-                                <option value="" disabled selected>Selecciona un asunto</option>
-                                <option value="informacion">Información General</option>
-                                <option value="ventas">Ventas</option>
-                                <option value="cotizacion">Solicitud de Cotización</option>
-                                <option value="distribucion">Distribución</option>
-                                <option value="otro">Otro</option>
+                    
+                    <form action="enviar_correo.php" method="POST" id="contactFormPHP" class="contact-form" enctype="multipart/form-data">
+                        <input type="hidden" name="asunto" id="hiddenAsunto" value="">
+                        
+                        <div class="form-group" id="asuntoGroup">
+                            <label for="asunto_select">Asunto <span class="required">*</span></label>
+                            <select id="asunto_select" name="asunto_select" required>
+                                <option value="">Selecciona un asunto...</option>
+                                <option value="Contacto General">Contacto General</option>
+                                <option value="Vacantes">Vacantes</option>
+                                <option value="Ser Cliente">Ser Cliente</option>
+                                <option value="Ser Proveedor">Ser Proveedor</option>
+                                <option value="Mensaje al Director">Mensaje al Director</option>
+                                <option value="Buzon de Quejas">Buzón de Quejas</option>
+                                <option value="Agradecimiento">Agradecimiento</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje <span class="required">*</span></label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                        <div id="formGroup_Contacto General" class="form-fields-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contacto_nombre">Nombre Completo <span class="required">*</span></label>
+                                    <input type="text" id="contacto_nombre" name="contacto_nombre" placeholder="Tu nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contacto_email">Correo electrónico <span class="required">*</span></label>
+                                    <input type="email" id="contacto_email" name="contacto_email" placeholder="tu@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contacto_telefono">Teléfono</label>
+                                <input type="tel" id="contacto_telefono" name="contacto_telefono" placeholder="Tu número de teléfono">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="contacto_mensaje">Mensaje <span class="required">*</span></label>
+                                <textarea id="contacto_mensaje" name="contacto_mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
                         </div>
+
+                        <div id="formGroup_Vacantes" class="form-fields-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vacantes_nombre">Nombre completo <span class="required">*</span></label>
+                                    <input type="text" id="vacantes_nombre" name="vacantes_nombre" placeholder="Tu nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="vacantes_email">Correo electrónico <span class="required">*</span></label>
+                                    <input type="email" id="vacantes_email" name="vacantes_email" placeholder="tu@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="vacantes_cv">Adjuntar CV o Documento (Máx. 5MB, PDF/DOCX) <span class="required">*</span></label>
+                                <input type="file" id="vacantes_cv" name="vacantes_cv" accept=".pdf,.doc,.docx">
+                                <small>Solo se aceptan archivos PDF, DOC o DOCX.</small>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="vacantes_mensaje">Mensaje adicional</label>
+                                <textarea id="vacantes_mensaje" name="vacantes_mensaje" rows="5" placeholder="Escribe un mensaje adicional aquí..."></textarea>
+                            </div>
+                        </div>
+
+                        <div id="formGroup_Ser Cliente" class="form-fields-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cliente_empresa">Empresa o nombre <span class="required">*</span></label>
+                                    <input type="text" id="cliente_empresa" name="cliente_empresa" placeholder="Nombre de tu empresa o tuyo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cliente_email">Correo electrónico <span class="required">*</span></label>
+                                    <input type="email" id="cliente_email" name="cliente_email" placeholder="tu@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cliente_telefono">Teléfono <span class="required">*</span></label>
+                                <input type="tel" id="cliente_telefono" name="cliente_telefono" placeholder="Tu número de teléfono">
+                            </div>
+                            <div class="form-group">
+                                <label for="cliente_interes">Servicio de interés <span class="required">*</span></label>
+                                <input type="text" id="cliente_interes" name="cliente_interes" placeholder="Ej: Compra al por mayor, exportación, etc.">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="cliente_mensaje">Mensaje <span class="required">*</span></label>
+                                <textarea id="cliente_mensaje" name="cliente_mensaje" rows="5" placeholder="Describe tu interés en ser cliente..."></textarea>
+                            </div>
+                        </div>
+
+                        <div id="formGroup_Ser Proveedor" class="form-fields-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="proveedor_empresa">Empresa o proveedor <span class="required">*</span></label>
+                                    <input type="text" id="proveedor_empresa" name="proveedor_empresa" placeholder="Nombre de tu empresa o tuyo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="proveedor_email">Correo electrónico <span class="required">*</span></label>
+                                    <input type="email" id="proveedor_email" name="proveedor_email" placeholder="tu@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="proveedor_producto">Producto o servicio ofrecido <span class="required">*</span></label>
+                                <input type="text" id="proveedor_producto" name="proveedor_producto" placeholder="Ej: Material de empaque, transporte, materia prima">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="proveedor_mensaje">Mensaje <span class="required">*</span></label>
+                                <textarea id="proveedor_mensaje" name="proveedor_mensaje" rows="5" placeholder="Describe el producto o servicio que ofreces..."></textarea>
+                            </div>
+                        </div>
+
+                        <div id="formGroup_Mensaje al Director" class="form-fields-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="director_nombre">Tu nombre <span class="required">*</span></label>
+                                    <input type="text" id="director_nombre" name="director_nombre" placeholder="Tu nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="director_email">Correo electrónico <span class="required">*</span></label>
+                                    <input type="email" id="director_email" name="director_email" placeholder="tu@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="director_telefono">Teléfono</label>
+                                <input type="tel" id="director_telefono" name="director_telefono" placeholder="Tu número de teléfono (opcional)">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="director_mensaje">Mensaje al director <span class="required">*</span></label>
+                                <textarea id="director_mensaje" name="director_mensaje" rows="5" placeholder="Escribe tu mensaje para el director aquí..."></textarea>
+                            </div>
+                        </div>
+
+                        <div id="formGroup_Buzon de Quejas" class="form-fields-group">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="queja_nombre">Nombre</label>
+                                    <input type="text" id="queja_nombre" name="queja_nombre" placeholder="Tu nombre (opcional)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="queja_email">Correo</label>
+                                    <input type="email" id="queja_email" name="queja_email" placeholder="tu@email.com (opcional)">
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="queja_descripcion">Descripción de la queja <span class="required">*</span></label>
+                                <textarea id="queja_descripcion" name="queja_descripcion" rows="5" placeholder="Describe tu queja aquí..."></textarea>
+                            </div>
+                        </div>
+
+                        <div id="formGroup_Agradecimiento" class="form-fields-group">
+                            <div class="form-group">
+                                <label for="agradecimiento_nombre">Tu nombre <span class="required">*</span></label>
+                                <input type="text" id="agradecimiento_nombre" name="agradecimiento_nombre" placeholder="Tu nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="agradecimiento_dirigido">A quién va dirigido <span class="required">*</span></label>
+                                <input type="text" id="agradecimiento_dirigido" name="agradecimiento_dirigido" placeholder="Ej: Equipo de ventas, Atención al Cliente">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="agradecimiento_mensaje">Mensaje de agradecimiento <span class="required">*</span></label>
+                                <textarea id="agradecimiento_mensaje" name="agradecimiento_mensaje" rows="5" placeholder="Escribe tu mensaje de agradecimiento aquí..."></textarea>
+                            </div>
+                        </div>
+
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i> Enviar Mensaje
                         </button>
+
+                        <div id="formMessage" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
                     </form>
                 </div>
             </div>
@@ -197,7 +350,8 @@
                 <div class="faq-accordion">
                     <div class="faq-item animate-on-scroll">
                         <div class="faq-question">
-                            <button class="faq-btn btn">¿Cuáles son los métodos de pago aceptados?</button> </div>
+                            <button class="faq-btn btn">¿Cuáles son los métodos de pago aceptados?</button>
+                        </div>
                         <div class="faq-answer">
                             <p class="animated-text-element">Aceptamos transferencias bancarias, depósitos, cheques y pagos con tarjeta de crédito o débito. Para clientes recurrentes, ofrecemos opciones de crédito según evaluación.</p>
                         </div>
@@ -259,29 +413,30 @@
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook icon"></i></a>
-                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin icon"></i></a>
+                        <a href="https://www.facebook.com/GrupoCultivares" aria-label="Facebook"><i class="fab fa-facebook icon"></i></a>
+                        <a href="https://www.linkedin.com/company/grupo-cultivares" aria-label="LinkedIn"><i class="fab fa-linkedin icon"></i></a>
                     </div>
                     <div class="contact-info">
                         <p>Email: contacto@Cultivares.com.mx</p>
                         <p>Teléfono 1: +52 (694) 952 6061</p>
                         <p>Teléfono 2: +52 (694) 952 6062</p>
-                        <p>Teléfono 3: +52 (694) 952 0209</p>
+                        <p>Teléfono 3: +52 (694) 952 0209</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Cultivares. Todos los derechos reservados.</p>
+                <p>© <span id="current-year"></span> Cultivares. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/js.js"></script>
     <script src="js/carga.js"></script>
-    <script src="js/accordion.js"></script> <script src="https://unpkg.com/i18next/dist/i18next.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="https://unpkg.com/i18next/dist/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/dist/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend/dist/i18nextHttpBackend.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/animations.js" defer></script> 
+    <script src="js/animations.js" defer></script>
+    <script src="js/sis_correo.js"></script>
 </body>
 </html>
