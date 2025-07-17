@@ -1,0 +1,99 @@
+/* Estilos CSS adicionales para los cuadros de detalle de contacto */
+.contact-detail-box {
+    display: none; /* Oculto por defecto */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.contact-detail-box.active {
+    display: block; /* Visible cuando está activo */
+}
+.contact-detail-box p {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #333;
+}
+.contact-detail-box p strong {
+    color: #555;
+}
+.contact-detail-box .close-btn {
+    float: right;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s ease;
+}
+.contact-detail-box .close-btn:hover {
+    color: #333;
+}
+/* Nuevos estilos para la grid de personas de contacto, similar a quienes-somos */
+.contact-people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.person-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indica que es clickeable */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.person-card .person-avatar {
+    width: 100px; /* Tamaño del avatar */
+    height: 100px;
+    /* --- CAMBIO CRÍTICO AQUÍ --- */
+    border-radius: 10px; /* Esquinas ligeramente redondeadas */
+    /* -------------------------- */
+    background-color: #e0e0e0; /* Fondo para placeholder si no hay imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden; /* Asegura que la imagen se ajuste */
+}
+
+.person-card .person-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre el área sin distorsionar */
+}
+
+.person-card .person-avatar i {
+    font-size: 60px;
+    color: #888;
+}
+
+.person-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.person-card p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Estilos específicos para la sección del mapa si se necesita ajustar el espacio */
+.location-map {
+    margin-top: 40px; /* Ajusta el margen superior si es necesario */
+}

@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Cultivares</title>
     <meta name="description" content="Estamos aquí para responder a tus preguntas y ayudarte con cualquier información que necesites sobre nuestros productos y servicios.">
+    
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/carga.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="img/logos/grupo_cultivares_logo.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> </head>
 <body class="loading">
     <div id="loader-wrapper">
         <div class="loader-content">
             <img src="img/logos/logo1.png" alt="Logo Cultivares" class="loader-logo animate__animated animate__fadeInUp">
-            <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia.</p>
+            <p class="loader-text animate__animated animate__fadeInUp animate__delay-1s">Cultivando la excelencia</p>
         </div>
     </div>
 
@@ -66,8 +66,10 @@
                     <div class="contact-info animate-on-scroll">
                         <h2 class="animated-text-element">Información de Contacto</h2>
                         <div class="info-items">
-                            <div class="info-item card animate-on-scroll"> <i class="fas fa-map-marker-alt icon"></i> <div>
-                                    <h3 class="animated-text-element">Planta Empacadora y Planta Deshidratadora.</h3>
+                            <div class="info-item card animate-on-scroll"> 
+                                <i class="fas fa-map-marker-alt icon"></i> 
+                                <div>
+                                    <h3 class="animated-text-element">Planta Empacadora y Planta Deshidratadora</h3>
                                     <p class="animated-text-element">
                                         Carretera Internacional Chametla KM1, S/N <br>
                                         El Tazajal, El Rosario, Sinaloa CP. 82802
@@ -81,7 +83,7 @@
                                     <h3 class="animated-text-element">Teléfono</h3>
                                     <p class="animated-text-element">+52 (694) 952 6061</p>
                                     <p class="animated-text-element">+52 (694) 952 6062</p>
-                                    <p class="animated-text-element">+52 (694) 952 0209</p>
+                                    <p class="animated-text-element">+52 (694) 952 0209</p>
                                 </div>
                             </div>
 
@@ -99,8 +101,8 @@
                                     <h3 class="animated-text-element">Oficinas Administrativas</h3>
                                     <p class="animated-text-element">
                                         Av. Sierra Nevada No. 144,<br>
-                                        Interior 1, Col. Lomas de Mazatlán,o <br>
-                                        C.P. 82110, Mazatlán, Sin. <br>
+                                        Interior 1, Col. Lomas de Mazatlán,<br>
+                                        C.P. 82110, Mazatlán, Sin. <br>
                                     </p>
                                 </div>
                             </div>
@@ -111,7 +113,6 @@
                                     <h3 class="animated-text-element">Teléfono</h3>
                                     <p class="animated-text-element">
                                         (669) 991 3885<br>
-                                        
                                     </p>
                                 </div>
                             </div>
@@ -131,9 +132,9 @@
                     </div>
 
                     <div class="location-map animate-on-scroll">
-                        <h2 data-i18n="location_map_title" class="animated-text-element">Ubicación Planta Empacadora</h2>
+                        <h2 data-i18n="location_map_title" class="animated-text-element">Ubicación Planta Empacadora y Planta Deshidratadora</h2>
                         <div class="map-container static-image">
-                            <a href="https://www.google.com/maps/place/Cultivares/@22.9269362,-105.8412935,696m/data=!3m2!1e3!4b1!4m6!3m5!1s0x869f1f0e72399b97:0x839c85064824dbb2!8m2!3d22.9269313!4d-105.8387132!16s%2Fg%2F11f3n5xww4?hl=es&entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4042871189493!2d-105.93297058498862!3d23.234614384852936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863378378d3b8f67%3A0x60f0d2c9b4e3c5a!2sTu%20Ubicaci%C3%B3n%20Exacta!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Ver ubicación de Planta Empacadora en Google Maps">
@@ -141,51 +142,42 @@
                                     <i class="fas fa-map-marker-alt icon"></i> <span data-i18n="click_to_view_map" class="animated-text-element">Haz clic para ver la ubicación en el mapa</span>
                                 </div>
                             </a>
-                        </div>
+                            </div>
                     </div>
                 </div>
                 
                 <div class="contact-form-container animate-on-scroll">
                     <h2 class="animated-text-element">Envíanos un Mensaje</h2>
-                    <form id="contactForm" class="contact-form">
+                    <form action="enviar_correo.php" method="POST" id="contactFormPHP" class="contact-form" enctype="multipart/form-data">
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="form-group" id="nombreGroup">
                                 <label for="nombre">Nombre Completo <span class="required">*</span></label>
                                 <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id="emailGroup">
                                 <label for="email">Email <span class="required">*</span></label>
                                 <input type="email" id="email" name="email" required placeholder="tu@email.com">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
+
+                        <div class="form-row" id="telefonoRow"> 
+                            <div class="form-group" id="telefonoGroup">
                                 <label for="telefono">Teléfono</label>
                                 <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
                             </div>
-                            <div class="form-group">
-                                <label for="empresa">Empresa</label>
-                                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
-                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="asunto">Asunto <span class="required">*</span></label>
-                            <select id="asunto" name="asunto" required>
-                                <option value="" disabled selected>Selecciona un asunto</option>
-                                <option value="informacion">Información General</option>
-                                <option value="ventas">Ventas</option>
-                                <option value="cotizacion">Solicitud de Cotización</option>
-                                <option value="distribucion">Distribución</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
+
+                        <div class="form-group" id="mensajeGroup">
                             <label for="mensaje">Mensaje <span class="required">*</span></label>
                             <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
+
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
                             <i class="fas fa-paper-plane"></i> Enviar Mensaje
                         </button>
+
+                        <div id="formMessage" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
+
                     </form>
                 </div>
             </div>
@@ -197,7 +189,8 @@
                 <div class="faq-accordion">
                     <div class="faq-item animate-on-scroll">
                         <div class="faq-question">
-                            <button class="faq-btn btn">¿Cuáles son los métodos de pago aceptados?</button> </div>
+                            <button class="faq-btn btn">¿Cuáles son los métodos de pago aceptados?</button> 
+                        </div>
                         <div class="faq-answer">
                             <p class="animated-text-element">Aceptamos transferencias bancarias, depósitos, cheques y pagos con tarjeta de crédito o débito. Para clientes recurrentes, ofrecemos opciones de crédito según evaluación.</p>
                         </div>
@@ -259,29 +252,39 @@
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/GrupoCultivares"><i class="fab fa-facebook icon"></i></a>
-                        <a href="https://www.linkedin.com/company/grupo-cultivares"><i class="fab fa-linkedin icon"></i></a>
+                        <a href="https://www.facebook.com/GrupoCultivares" aria-label="Facebook"><i class="fab fa-facebook icon"></i></a>
+                        <a href="https://www.linkedin.com/company/grupo-cultivares" aria-label="LinkedIn"><i class="fab fa-linkedin icon"></i></a>
                     </div>
                     <div class="contact-info">
                         <p>Email: contacto@Cultivares.com.mx</p>
                         <p>Teléfono 1: +52 (694) 952 6061</p>
                         <p>Teléfono 2: +52 (694) 952 6062</p>
-                        <p>Teléfono 3: +52 (694) 952 0209</p>
+                        <p>Teléfono 3: +52 (694) 952 0209</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Cultivares. Todos los derechos reservados.</p>
+                <p>© <span id="current-year"></span> Cultivares. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/js.js"></script>
-    <script src="js/carga.js"></script>
-    <script src="js/accordion.js"></script> <script src="https://unpkg.com/i18next/dist/i18next.min.js"></script>
+    <script src="js/carga.js"></script>           
+    <script src="js/js.js"></script>             
+    <script src="js/accordion.js"></script>      
+    <script src="https://unpkg.com/i18next/dist/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/dist/i18nextBrowserLanguageDetector.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend/dist/i18nextHttpBackend.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/animations.js" defer></script> 
+    <script src="js/animations.js" defer></script>
+    <script src="js/correo.js"></script>
+
+    <style>
+        .success-message {
+            color: green;
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
 </body>
 </html>
