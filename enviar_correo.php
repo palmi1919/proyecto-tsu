@@ -13,18 +13,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // Configuración del servidor
+        // Configuración del servidor SMTP
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'al202300078tidsm@gmail.com';
-        $mail->Password   = 'ifttisuyzopqunsh';
+        $mail->Password   = 'ifttisuyzopqunsh'; // Contraseña de aplicación
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // Remitente y destinatario
         $mail->setFrom('al202300078tidsm@gmail.com', 'Cultivares Contacto');
-        $mail->addAddress('al202300078tidsm@gmail.com');
+        $mail->addAddress('al202300078tidsm@gmail.com'); // <--- Dirección de prueba
 
         // Datos del formulario
         $nombre   = $_POST['nombre'] ?? '';
