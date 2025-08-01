@@ -2204,4 +2204,35 @@ p {
         margin: 5% auto;
         padding: 1.5rem;
     }
+.footer-col .whatsapp-section {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer-col .whatsapp-text {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.footer-col .whatsapp-link a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+}
+
+.footer-col .whatsapp-link a i {
+    font-size: 4rem;
+    color: #25D366;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-col .whatsapp-link a i:hover {
+    color: #128C7E;
+    transform: scale(1.1);
+}
+
 }
